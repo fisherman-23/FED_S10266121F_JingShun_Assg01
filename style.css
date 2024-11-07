@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets\\fonts\\Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets\\fonts\\Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+} 
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.landing {
+    background-image: url('assets\\images\\modern-white-minimalist-interior-kitchen-sofa.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.landing-text {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    width: 100px;
+    height: 100vh;
+    flex-grow: 2.3;
+    
+}
+.landing-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+}
+.landing-text p {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.landing-visual {
+    display: flex;
+    background-color: transparent;
+    flex-grow: 5;
+}
+
+.navbar {
+    display: flex;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    align-items: center;
+    border-radius: 15px;
+    height: 3.2rem;
+    padding: 1rem 1rem;
+    margin: 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    font-size: 1rem;
+    bottom: 0;
+    max-width: 50%;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+
+.navbar ul li {
+    margin-right: 1rem;
+}
+
+.navbar img {
+    max-width: 5rem;
+    margin-right: 3rem;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.promotions {
+    padding: 3rem 3rem 0rem 3rem;
+}
+.promotion-container {
+    display: flex;
+    flex-direction: row;
+}
+.promotion-items {
+    border-radius: 15px;
+    border: 1px solid #333;
+    background-color: rgba(245, 234, 220, 1);
+    padding: 3rem;
+    margin: 2rem;
+}
+.promotion-items img {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+}
+
+.new-arrivals {
+    padding: 3rem 3rem 0rem 3rem;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .promotion-container {
+        flex-direction: column;
+    }
+    .promotion-items {
+        margin: 1rem;
+    }
+    
+}

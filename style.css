@@ -19,6 +19,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: #f2f2f2;
+}
 .landing {
     background-image: url('assets\\images\\modern-white-minimalist-interior-kitchen-sofa.jpg');
     background-size: cover;
@@ -68,7 +71,7 @@
     margin: 1rem;
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(20px);
-    font-size: 1rem;
+    font-size: 1.2rem;
     bottom: 0;
     max-width: 50%;
 }
@@ -98,32 +101,83 @@
 }
 
 .promotions {
-    padding: 3rem 3rem 0rem 3rem;
+    margin: 3rem 3rem 0rem 3rem;
+}
+.promotions h2 {
+    margin-bottom: 2rem;
 }
 .promotion-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
-.promotion-items {
+
+.promotion-item {
+    perspective: 1000px; /* Creates 3D perspective for the flip effect */
+    width: 80%; /* Adjust based on your needs */
+    height: auto;
+    aspect-ratio: 4/5;
+    position: relative;
+    margin: 3rem;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back of the card when flipped */
+    transition: transform 0.6s ease; /* Smooth transition for the flip */
     border-radius: 15px;
     border: 1px solid #333;
-    background-color: rgba(245, 234, 220, 1);
     padding: 3rem;
-    margin: 2rem;
 }
-.promotion-items img {
+
+.card-front {
+    background-color: rgb(217, 213, 208);
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    background-color: rgb(205, 206, 215);
+    transform: rotateY(180deg); /* Initially rotated */
+}
+
+.card-front img {
     object-fit: cover;
     max-width: 100%;
     height: auto;
 }
 
+.promotion-item:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.promotion-item:hover .card-back {
+    transform: rotateY(360deg);
+}
+
+
 .new-arrivals {
     padding: 3rem 3rem 0rem 3rem;
 }
 
-
+.buy-button {
+    background-color: #333;
+    color: #fff;
+    margin-top: 1rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
 @media screen and (max-width: 768px) {
+    /* Hide Navbar */
+    .navbar {
+        display: none;
+    }
 
     .promotion-container {
         flex-direction: column;
@@ -133,3 +187,5 @@
     }
     
 }
+
+

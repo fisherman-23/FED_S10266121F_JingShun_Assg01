@@ -218,6 +218,7 @@ h2, h3 {
 }
 
 @media screen and (max-width: 768px) {
+
     .landing-text h1 {
         font-size: 2rem;
     }
@@ -229,8 +230,11 @@ h2, h3 {
     .promotion-container {
         flex-direction: column;
     }
-    .promotion-items {
-        margin: 1rem;
+    .promotion-item {
+        width: 100%;
+    }
+    .card-back {
+        padding: 1rem;
     }
 
     .new-arrivals-image  {
@@ -253,6 +257,21 @@ h2, h3 {
         display: block;
         margin: 8px 0;
     }
+
+    .promotion-item.touch-hover-end .card-front {
+        transform: rotateY(0deg);
+    }
+    .promotion-item.touch-hover-end  .card-back {
+        transform: rotateY(180deg);
+    }
+    .promotion-item.touch-hover-start .card-front {
+        transform: rotateY(180deg);
+    }
+    
+    .promotion-item.touch-hover-start  .card-back {
+        transform: rotateY(360deg);
+    }
+    
     
 }
 

@@ -21,6 +21,7 @@
 }
 body {
     background-color: #f2f2f2;
+    overflow-x: hidden;
 }
 h2, h3 {
     font-weight: bold;
@@ -65,7 +66,31 @@ h2, h3 {
     background-color: transparent;
     flex-grow: 5;
 }
+.start-button {
+    /* circle button */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    margin-top: 5rem;
+    align-self: center;
+    animation: bounce 1.5s infinite;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
 
+}
 .navbar {
     display: flex;
     position: absolute;
@@ -187,7 +212,7 @@ h2, h3 {
 
 .new-arrivals-container {
     padding: 3rem;
-    background-color: rgb(215, 205, 168);
+    background-color: rgb(225, 225, 225);
     border-radius: 15px;
     display: flex;
     flex-wrap: wrap;
@@ -222,65 +247,15 @@ h2, h3 {
     backdrop-filter: blur(10px);
 }
 
-@media screen and (max-width: 768px) {
-
-    .landing-text h1 {
-        font-size: 2rem;
-    }
-    .landing-text h3 {
-        font-size: 1rem;
-    }
-    /* Hide Navbar */
-    .navbar {
-        display: none;
-    }
-
-    .promotion-container {
-        flex-direction: column;
-    }
-    .promotion-item {
-        width: 100%;
-    }
-    .card-back {
-        padding: 1rem;
-    }
-
-    .new-arrivals-image  {
-        flex-basis: 100%;
-    }
-
-    .new-arrivals-container {
-        padding: 2rem;
-    }
-    .price-tag {
-        padding: 0.5rem;
-    }
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-        gap: 16px;
-      }
-      
-      .footer-legal a {
-        display: block;
-        margin: 8px 0;
-    }
-
-    .promotion-item.touch-hover-end .card-front {
-        transform: rotateY(0deg);
-    }
-    .promotion-item.touch-hover-end  .card-back {
-        transform: rotateY(180deg);
-    }
-    .promotion-item.touch-hover-start .card-front {
-        transform: rotateY(180deg);
-    }
+.topsellers {
+    position: relative;
+    padding: 3rem 3rem 0rem 3rem;
+    margin-bottom: 10rem;
     
-    .promotion-item.touch-hover-start  .card-back {
-        transform: rotateY(360deg);
-    }
-    
-    
+}
+
+.topsellers h2 {
+    margin-bottom: 2rem;
 }
 
 
@@ -370,3 +345,125 @@ h2, h3 {
     font-size: 12px;
   }
   
+
+
+.translucent-fade-in-top {
+    position: absolute;
+    background: linear-gradient(rgb(242, 242, 242) 0%,rgba(242, 242, 242,0) 70%);
+    height: 100px;
+    width: 100%;
+    top: 90px;
+
+}
+
+.translucent-fade-in-bot {
+    position: absolute;
+    background: linear-gradient(rgba(242, 242, 242,0) 0%,rgb(242, 242, 242) 70%);
+    height: 100px;
+    width: 100%;
+    bottom: -50px;
+}
+
+
+.topsellers-grid {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+  
+.topsellers-grid img {
+    width: 100%;
+    height: auto;
+    transition: opacity 1s, transform 1s;
+    animation: 1s linear fadein;
+    
+
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 4/5.5; /* Square aspect ratio */
+    object-fit: cover;
+}
+  
+.fade-out {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+@keyframes fadein {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  
+    to {
+      opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+
+  @media screen and (max-width: 768px) {
+
+    .landing-text h1 {
+        font-size: 2rem;
+    }
+    .landing-text h3 {
+        font-size: 1rem;
+    }
+    /* Hide Navbar */
+    .navbar {
+        display: none;
+    }
+
+    .promotion-container {
+        flex-direction: column;
+    }
+    .promotion-item {
+        width: 100%;
+    }
+    .card-back {
+        padding: 1rem;
+    }
+
+    .new-arrivals-image  {
+        flex-basis: 100%;
+    }
+
+    .new-arrivals-container {
+        padding: 2rem;
+    }
+    .price-tag {
+        padding: 0.5rem;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+      }
+      
+      .footer-legal a {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .promotion-item.touch-hover-end .card-front {
+        transform: rotateY(0deg);
+    }
+    .promotion-item.touch-hover-end  .card-back {
+        transform: rotateY(180deg);
+    }
+    .promotion-item.touch-hover-start .card-front {
+        transform: rotateY(180deg);
+    }
+    
+    .promotion-item.touch-hover-start  .card-back {
+        transform: rotateY(360deg);
+    }
+    .topsellers-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    
+}

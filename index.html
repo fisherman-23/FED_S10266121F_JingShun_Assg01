@@ -12,6 +12,7 @@
         <div class="landing-text">
             <h1 data-value="Welcome to IKEA">Welcome to IKEA</h1>
             <h3>Designed for life.</h3>
+            <button class="start-button" onclick="document.getElementById('promotions').scrollIntoView({ behavior: 'smooth' });"></button>
         </div>
         <div class="landing-visual"></div>
         <nav class="navbar">
@@ -23,6 +24,7 @@
             </ul>
         </nav>
     </section>
+    <div id="promotions"></div>
     <section class="promotions">
         <h2>Special Offers & Promotions</h2>
         <div class="promotion-container">
@@ -129,6 +131,18 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="topsellers">
+
+        <h2>Top Sellers</h2>
+        <div class="topsellers-grid" id="topsellers-grid">
+
+
+        </div>
+        <div class="translucent-fade-in-top"></div>
+        <div class="translucent-fade-in-bot"></div>
+
     </section>
     <footer class="footer">
         <div class="footer-container">

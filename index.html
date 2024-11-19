@@ -10,6 +10,18 @@
 <body>
     <section class="landing">
         <div class="landing-text">
+            <button class="hamburger-button" onclick="toggleMobileMenu(this)">
+                <img src="assets\images\Hamburger.svg" width="45px" alt="Hamburger Icon">
+                <ul class="mobile-menu">
+                    <a href="index.html">Home</a> 
+                    <a href="myworks.html">Showroom</a> 
+                    <a href="achievements-certifications.html">Services</a> 
+                    <a href="lsl.html">My Cart</a> 
+            
+                  </ul>
+            </button>
+
+
             <h1 data-value="Welcome to IKEA">Welcome to IKEA</h1>
             <h3>Designed for life.</h3>
             <button class="start-button" onclick="document.getElementById('promotions').scrollIntoView({ behavior: 'smooth' });"></button>
@@ -137,8 +149,6 @@
 
         <h2>Top Sellers</h2>
         <div class="topsellers-grid" id="topsellers-grid">
-
-
         </div>
         <div class="translucent-fade-in-top"></div>
         <div class="translucent-fade-in-bot"></div>

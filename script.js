@@ -1,3 +1,7 @@
+function toggleMobileMenu(menu) {
+  menu.classList.toggle("open");
+}
+
 const elements = document.querySelectorAll(".promotion-item");
 
 elements.forEach((element) => {

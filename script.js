@@ -2,6 +2,22 @@ function toggleMobileMenu(menu) {
   menu.classList.toggle("open");
 }
 
+// Select the navbar and landing screen
+const navbar = document.querySelector(".navbar");
+const landingScreen = document.querySelector(".landing-home");
+
+// Get the height of the landing screen
+const landingHeight = landingScreen.offsetHeight;
+
+// Listen for the scroll event
+window.addEventListener("scroll", () => {
+  if (window.scrollY > landingHeight) {
+    navbar.classList.add("fixed"); // Add the fixed class when scrolled past the landing screen
+  } else {
+    navbar.classList.remove("fixed"); // Remove the fixed class when above the landing screen
+  }
+});
+
 const elements = document.querySelectorAll(".promotion-item");
 
 elements.forEach((element) => {

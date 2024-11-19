@@ -26,8 +26,15 @@ body {
 h2, h3 {
     font-weight: bold;
 }
-.landing {
+.landing-home {
     background-image: url('assets\\images\\modern-white-minimalist-interior-kitchen-sofa.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.landing-services {
+    background-image: url('assets\\images\\landing-services.png');
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -39,7 +46,7 @@ h2, h3 {
     flex-direction: column;
     justify-content: center;
     padding-left: 2rem;
-    background: rgba(255, 219, 0, 0.3);
+    background: rgba(255, 219, 0, 0.5);
     backdrop-filter: blur(10px);
     width: 100px;
     height: 100vh;
@@ -69,7 +76,6 @@ h2, h3 {
 .hamburger-button {
     display: none;
     position: absolute;
-    cursor: pointer;
     background-color: transparent;
     top: 2rem;
     left: 2rem;
@@ -154,8 +160,16 @@ h2, h3 {
     font-size: 1.2rem;
     bottom: 0;
     max-width: 50%;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
 }
-
+/* Fixed navbar style */
+.navbar.fixed {
+    position: fixed; /* Fix to the top */
+    top: 0;
+    opacity: 1; /* Fully visible */
+    z-index: 1000; /* Ensure it stays above other elements */
+  }
+  
 .navbar ul {
     display: flex;
     flex-direction: row;
@@ -299,7 +313,9 @@ h2, h3 {
     position: relative;
     padding: 3rem 3rem 0rem 3rem;
     margin-bottom: 10rem;
+    overflow-x: hidden;
     
+
 }
 
 .topsellers h2 {

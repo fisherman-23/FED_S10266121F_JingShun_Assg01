@@ -10,15 +10,15 @@
 
 </head>
 <body>
-    <section class="landing-services">
+    <section class="landing services">
         <div class="landing-text">
             <button class="hamburger-button" onclick="toggleMobileMenu(this)">
                 <img src="assets\images\Hamburger.svg" width="45px" alt="Hamburger Icon">
                 <ul class="mobile-menu">
                     <a href="index.html">Home</a> 
-                    <a href="myworks.html">Showroom</a> 
-                    <a href="achievements-certifications.html">Services</a> 
-                    <a href="lsl.html">My Cart</a> 
+                    <a href="showroom.html">Showroom</a> 
+                    <a href="services.html">Services</a> 
+                    <a href="cart.html">My Cart</a> 
             
                   </ul>
             </button>
@@ -26,7 +26,7 @@
 
             <h1 data-value="IKEA Services">IKEA Services</h1>
             <h3>Designed for life.</h3>
-            <button class="start-button" onclick="document.getElementById('promotions').scrollIntoView({ behavior: 'smooth' });"></button>
+            <button class="start-button" onclick="document.getElementById('ikea-card').scrollIntoView({ behavior: 'smooth' });"></button>
         </div>
         <div class="landing-visual"></div>
         <nav class="navbar">
@@ -37,6 +37,17 @@
                 <li><a href="services.html">Services</a></li>
             </ul>
         </nav>
+    </section>
+
+    <section class="ikea-membership" id="ikea-card">
+        <div class="membership-container">
+            <h2>The IKEA Card</h2>
+            <p>Join our membership program to receive exclusive benefits and discounts</p>
+            <div class="card-container">       
+                <div class="membership-card" id="membership-card"></div>
+            </div>
+        </div>
+
     </section>
 </body>
 </html>

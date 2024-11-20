@@ -26,14 +26,15 @@ body {
 h2, h3 {
     font-weight: bold;
 }
-.landing-home {
+.landing {
     background-image: url('assets\\images\\modern-white-minimalist-interior-kitchen-sofa.jpg');
     background-size: cover;
     width: 100%;
     height: 100vh;
     display: flex;
 }
-.landing-services {
+
+.landing.services {
     background-image: url('assets\\images\\landing-services.png');
     background-size: cover;
     width: 100%;
@@ -329,7 +330,7 @@ h2, h3 {
     border-radius: 15px; /* Rounded corners */
     height: 15px; /* Thin height */
     overflow: hidden; /* Ensures the progress doesn't spill over */
-    padding: 0.2rem;
+    padding: 0.1rem;
     margin-bottom: 1rem;
 }
 
@@ -465,8 +466,62 @@ h2, h3 {
         transform: translateY(0);
     }
   }
-  
+.landing.services {
+    margin-bottom: 0;
+}
+.ikea-membership {
+    background-image: url('assets\\images\\ikea-membership.png');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
 
+.membership-container p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    color: white;
+}
+.membership-container h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3rem;
+    color: white;
+}
+.membership-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.membership-card {
+    width: 40%;
+    aspect-ratio: 7/4;
+    background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    color: white;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1rem;
+}
   @media screen and (max-width: 768px) {
 
     .landing-text h1 {
@@ -531,6 +586,12 @@ h2, h3 {
 
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
+    .membership-card {
+        width: 100%;
+    }
+    .membership-container {
+        padding: 1.5rem;
+    }
     
 }

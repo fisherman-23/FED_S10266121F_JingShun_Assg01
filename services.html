@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="services.js" defer></script>
 
 
 </head>
+
 <body>
     <section class="landing services">
         <div class="landing-text">
             <button class="hamburger-button" onclick="toggleMobileMenu(this)">
                 <img src="assets\images\Hamburger.svg" width="45px" alt="Hamburger Icon">
                 <ul class="mobile-menu">
-                    <a href="index.html">Home</a> 
-                    <a href="showroom.html">Showroom</a> 
-                    <a href="services.html">Services</a> 
-                    <a href="cart.html">My Cart</a> 
-            
-                  </ul>
+                    <a href="index.html">Home</a>
+                    <a href="showroom.html">Showroom</a>
+                    <a href="services.html">Services</a>
+                    <a href="cart.html">My Cart</a>
+
+                </ul>
             </button>
 
 
             <h1 data-value="IKEA Services">IKEA Services</h1>
             <h3>Designed for life.</h3>
-            <button class="start-button" onclick="document.getElementById('ikea-card').scrollIntoView({ behavior: 'smooth' });"></button>
+            <button class="start-button"
+                onclick="document.getElementById('ikea-card').scrollIntoView({ behavior: 'smooth' });"></button>
         </div>
         <div class="landing-visual"></div>
         <nav class="navbar">
@@ -43,11 +47,89 @@
         <div class="membership-container">
             <h2>The IKEA Card</h2>
             <p>Join our membership program to receive exclusive benefits and discounts</p>
-            <div class="card-container">       
-                <div class="membership-card" id="membership-card"></div>
+            <div class="card-container">
+                <div class="membership-card" id="membership-card">
+                </div>
             </div>
+            <button class="apply-button" onclick="applyMembership()">Apply Now</button>
         </div>
 
     </section>
+    <section class="about-us">
+        <h2>About Us</h2>
+    </section>
+    <section class="sustainability-pledge">
+        <h2>Our Sustainability Pledge</h2>
+        <div class="sustainability-container">
+            <iframe src="https://www.youtube.com/embed/_Q08g-sjp6E?si=LYmekrQa4RX13hhP"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <p>At IKEA, sustainability isn't just a buzzword—it's a fundamental commitment that drives everything we do. We
+            recognize our responsibility to the planet and future generations, which is why we've set ambitious goals to
+            become
+            fully circular and climate positive by 2030. This means dramatically reducing our carbon footprint, using
+            only
+            renewable and recycled materials, and designing products that can be reused, repaired, and ultimately
+            recycled.
+            <br><br>
+            Our approach goes beyond just manufacturing. We're transforming our entire business model to promote
+            sustainable
+            living for our customers. From solar panels on our store roofs to offering affordable, energy-efficient home
+            solutions, we're helping people reduce their environmental impact without compromising on design or
+            functionality.
+            We believe that by making sustainable choices accessible and attractive, we can inspire millions of people
+            to join
+            us in creating a more sustainable future. Our vision is not just to sell furniture, but to enable people to
+            live
+            better, more sustainable lives within the limits of our planet.
+        </p>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- About Column -->
+                <div class="footer-column">
+                    <h3>About IKEA</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+
+                <!-- Help Column -->
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@ikea.com">contactus@ikea.com</a></li>
+                        <li><a href="#">+65 1234 5678</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Column -->
+                <div class="footer-column">
+                    <h3>Connect with Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.facebook.com/IKEASingapore/">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/ikeasingapore/?hl=en">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="footer-copyright">
+                    © Ooi Jing Shun 2024 - IKEA Redesign
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

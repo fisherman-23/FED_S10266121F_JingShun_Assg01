@@ -9,15 +9,15 @@ card.addEventListener("mousemove", (e) => {
   // Calculate rotation values based on cursor position
   // Multiply by 20 and subtract 10 to get a range of -10 to +10 degrees
   const rotateY = (x / rect.width) * 20 - 10;
-  const rotateX = ((y / rect.height) * 20 - 10) * -1; // Invert Y rotation
+  const rotateX = (y / rect.height) * 20 - 10; // Corrected rotation
 
   // Apply the transformation
-  card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  card.style.transform = `perspective(1000px) rotateY(${rotateY}deg) rotateX(${-rotateX}deg)`;
 });
 
 // Reset card position when mouse leaves
 card.addEventListener("mouseleave", () => {
-  card.style.transform = "rotateX(0) rotateY(0)";
+  card.style.transform = "perspective(1000px) rotateX(0) rotateY(0)";
   card.style.transition = "transform 0.5s ease";
 });
 

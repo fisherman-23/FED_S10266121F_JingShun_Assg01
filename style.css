@@ -18,10 +18,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 body {
     background-color: #f2f2f2;
     overflow-x: hidden;
+    
 }
 h2, h3 {
     font-weight: bold;
@@ -346,6 +348,7 @@ h2, h3 {
     color: white;
     padding: 48px 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin-top: 2rem;
   }
   
   .footer-container {
@@ -511,7 +514,7 @@ h2, h3 {
 .membership-card {
     width: 40%;
     aspect-ratio: 7/4;
-    background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+    /* background: linear-gradient(135deg, #2c2c2c, #1a1a1a); */
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     color: white;
@@ -521,7 +524,47 @@ h2, h3 {
     flex-direction: column;
     justify-content: space-between;
     font-size: 1rem;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease;
+    cursor: pointer;
+    background-image: url("assets/images/ikea-membership-card.png");
+    background-size: cover;
+    
 }
+.apply-button {
+    position: absolute;
+    bottom: 0;
+    right:  0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+.about-us {
+    padding: 3rem 3rem 0rem 3rem;
+    overflow-x: hidden;
+}
+
+.sustainability-pledge {
+    padding: 3rem 3rem 0rem 3rem;
+}
+.sustainability-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sustainability-container iframe {
+    margin: 2rem;
+    width: 40%;
+    aspect-ratio: 16/9;
+    height: auto;
+}
+
   @media screen and (max-width: 768px) {
 
     .landing-text h1 {
@@ -586,12 +629,19 @@ h2, h3 {
 
         grid-template-columns: repeat(2, 1fr);
     }
+    .apply-button {
+        padding: 1.5rem;
+        font-size: 1.5rem;
+    }
 
     .membership-card {
         width: 100%;
     }
     .membership-container {
         padding: 1.5rem;
+    }
+    .sustainability-container iframe {
+        width: 100%;
     }
     
 }

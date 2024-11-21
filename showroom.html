@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <script src="script.js" defer></script>
     <script src="showroom.js" defer></script>
 </head>
+
 <body>
     <section class="landing showroom">
         <div class="landing-text">
@@ -23,9 +25,9 @@
 
 
             <h1 data-value="IKEA Showroom">IKEA Showroom</h1>
-            <h3>Designed for life.</h3>
+            <h3>To inspire your space.</h3>
             <button class="start-button"
-                onclick="document.getElementById('ikea-card').scrollIntoView({ behavior: 'smooth' });"></button>
+                onclick="document.getElementById('showroom').scrollIntoView({ behavior: 'smooth' });"></button>
         </div>
         <div class="landing-visual"></div>
         <nav class="navbar">
@@ -37,6 +39,67 @@
             </ul>
         </nav>
     </section>
-    
+    <section class="showroom" id="showroom" style="background-image: url('assets\\images\\ikea-kitchen.png');">
+        <div class="info-bar">
+            <div>
+                <h2 id="showroom-name">Kitchen</h2>
+                <div class="arrow-controls">
+                    <button onclick="previous()"><img src="assets/images/ArrowCircleLeft.svg"></button>
+                    <button onclick="next()"><img src="assets/images/ArrowCircleRight.svg"></button>
+                </div>
+            </div>
+            <p id="showroom-desc"> In this open kitchen, soft muted brown-beige sets the stage for playful contrasts and
+                dashes of colour. It’s a look
+                that oozes personality and flows seamlessly into the living room, making it a fun and flexible meeting
+                point.
+                Perfect for sharing many moments with loved ones – while easily keeping an eye on the kids.
+            </p>
+            <h3>Featured</h3>
+            <img class="featured-image" id="featured-image" src="assets/images/ikea-kitchen-tap.png"
+                alt="featured product image">
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- About Column -->
+                <div class="footer-column">
+                    <h3>About IKEA</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#about">About Us</a></li>
+                        <li><a href="services.html#sustainability">Sustainability</a></li>
+                    </ul>
+                </div>
+
+                <!-- Help Column -->
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@ikea.com">contactus@ikea.com</a></li>
+                        <li><a href="#">+65 1234 5678</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Column -->
+                <div class="footer-column">
+                    <h3>Connect with Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.facebook.com/IKEASingapore/">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/ikeasingapore/?hl=en">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="footer-copyright">
+                    © Ooi Jing Shun 2024 - IKEA Redesign
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

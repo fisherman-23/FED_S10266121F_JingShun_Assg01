@@ -20,6 +20,7 @@
     box-sizing: border-box;
 
 }
+
 body {
     background-color: #f2f2f2;
     overflow-x: hidden;
@@ -196,6 +197,8 @@ h2, h3 {
 .navbar img {
     max-width: 5rem;
     margin-right: 3rem;
+    vertical-align: middle;
+
 }
 
 .navbar ul li a{

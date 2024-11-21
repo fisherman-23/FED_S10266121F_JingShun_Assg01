@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,24 +9,26 @@
     <script src="script.js" defer></script>
     <script src="index.js" defer></script>
 </head>
+
 <body>
     <section class="landing home">
         <div class="landing-text">
             <button class="hamburger-button" onclick="toggleMobileMenu(this)">
                 <img src="assets\images\Hamburger.svg" width="45px" alt="Hamburger Icon">
                 <ul class="mobile-menu">
-                    <a href="index.html">Home</a> 
-                    <a href="showroom.html">Showroom</a> 
-                    <a href="services.html">Services</a> 
-                    <a href="cart.html">My Cart</a> 
-            
-                  </ul>
+                    <a href="index.html">Home</a>
+                    <a href="showroom.html">Showroom</a>
+                    <a href="services.html">Services</a>
+                    <a href="cart.html">My Cart</a>
+
+                </ul>
             </button>
 
 
             <h1 data-value="Welcome to IKEA">Welcome to IKEA</h1>
             <h3>Designed for life.</h3>
-            <button class="start-button" onclick="document.getElementById('promotions').scrollIntoView({ behavior: 'smooth' });"></button>
+            <button class="start-button"
+                onclick="document.getElementById('promotions').scrollIntoView({ behavior: 'smooth' });"></button>
         </div>
         <div class="landing-visual"></div>
         <nav class="navbar">
@@ -73,7 +76,9 @@
                 <div class="card-back">
                     <h3>Product Details</h3>
                     <br>
-                    <p>POÄNG armchair has stylish curved lines in bentwood, providing nice support for the neck and comfy resilience. It’s been in our range for several decades and is still just as popular. Want to try it too?</p>
+                    <p>POÄNG armchair has stylish curved lines in bentwood, providing nice support for the neck and
+                        comfy resilience. It’s been in our range for several decades and is still just as popular. Want
+                        to try it too?</p>
                     <br>
                     <s>
                         <h3>Original Price: $99.99</h3>
@@ -93,7 +98,9 @@
                 <div class="card-back">
                     <h3>Product Details</h3>
                     <br>
-                    <p>A thick, dark blue towel with classic striped edge for a luxury feel. The low twist yarn only gets comfier with each wash. FREDRIKSJÖN towels come in several sizes for different uses, all in 100% cotton.</p>
+                    <p>A thick, dark blue towel with classic striped edge for a luxury feel. The low twist yarn only
+                        gets comfier with each wash. FREDRIKSJÖN towels come in several sizes for different uses, all in
+                        100% cotton.</p>
                     <br>
                     <s>
                         <h3>Original Price: $99.99</h3>
@@ -130,15 +137,21 @@
                 <h3>The IKEA Stat-O-Meter</h3>
                 <p>Comfort</p>
                 <div class="progress-bar-container">
-                    <div class="progress-bar" style="width: 85%; background-image: linear-gradient(to right, rgba(51, 142, 218, 0.9) 0%, rgba(51, 214, 166, 0.9) 100%);"></div> <!-- Adjust the width value for progress -->
+                    <div class="progress-bar"
+                        style="width: 85%; background-image: linear-gradient(to right, rgba(51, 142, 218, 0.9) 0%, rgba(51, 214, 166, 0.9) 100%);">
+                    </div> <!-- Adjust the width value for progress -->
                 </div>
                 <p>Durability</p>
                 <div class="progress-bar-container">
-                    <div class="progress-bar" style="width: 80%; background-image: linear-gradient(to right, #6f31b7 14%, #fb558e 82%);"></div> <!-- Adjust the width value for progress -->
+                    <div class="progress-bar"
+                        style="width: 80%; background-image: linear-gradient(to right, #6f31b7 14%, #fb558e 82%);">
+                    </div> <!-- Adjust the width value for progress -->
                 </div>
                 <p>Maintenance</p>
                 <div class="progress-bar-container">
-                    <div class="progress-bar" style="width: 75%; background-image: linear-gradient(to right, rgba(255, 140, 55, 0.9) 0%, rgba(236, 55, 80, 0.9) 100%);"></div> <!-- Adjust the width value for progress -->
+                    <div class="progress-bar"
+                        style="width: 75%; background-image: linear-gradient(to right, rgba(255, 140, 55, 0.9) 0%, rgba(236, 55, 80, 0.9) 100%);">
+                    </div> <!-- Adjust the width value for progress -->
                 </div>
             </div>
         </div>
@@ -154,45 +167,46 @@
     </section>
     <footer class="footer">
         <div class="footer-container">
-          <div class="footer-grid">
-            <!-- About Column -->
-            <div class="footer-column">
-              <h3>About IKEA</h3>
-              <ul class="footer-links">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Sustainability</a></li>
-              </ul>
+            <div class="footer-grid">
+                <!-- About Column -->
+                <div class="footer-column">
+                    <h3>About IKEA</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#about">About Us</a></li>
+                        <li><a href="services.html#sustainability">Sustainability</a></li>
+                    </ul>
+                </div>
+
+                <!-- Help Column -->
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@ikea.com">contactus@ikea.com</a></li>
+                        <li><a href="#">+65 1234 5678</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Column -->
+                <div class="footer-column">
+                    <h3>Connect with Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.facebook.com/IKEASingapore/">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/ikeasingapore/?hl=en">Instagram</a></li>
+                    </ul>
+                </div>
             </div>
-      
-            <!-- Help Column -->
-            <div class="footer-column">
-              <h3>Contact Us</h3>
-              <ul class="footer-links">
-                <li><a href="mailto:info@ikea.com">contactus@ikea.com</a></li>
-                <li><a href="#">+65 1234 5678</a></li>
-              </ul>
+
+            <!-- Bottom Section -->
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="footer-copyright">
+                    © Ooi Jing Shun 2024 - IKEA Redesign
+                </div>
             </div>
-      
-            <!-- Social Media Column -->
-            <div class="footer-column">
-              <h3>Connect with Us</h3>
-              <ul class="footer-links">
-                <li><a href="https://www.facebook.com/IKEASingapore/">Facebook</a></li>
-                <li><a href="https://www.instagram.com/ikeasingapore/?hl=en">Instagram</a></li>
-              </ul>
-            </div>
-          </div>
-      
-          <!-- Bottom Section -->
-          <div class="footer-bottom">
-            <div class="footer-legal">
-              <a href="#">Privacy Policy</a>
-            </div>
-            <div class="footer-copyright">
-              © Ooi Jing Shun 2024 - IKEA Redesign
-            </div>
-          </div>
         </div>
-      </footer>
+    </footer>
 </body>
+
 </html>

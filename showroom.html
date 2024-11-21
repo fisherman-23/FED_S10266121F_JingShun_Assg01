@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showroom</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="showroom.js" defer></script>
+</head>
+<body>
+    <section class="landing showroom">
+        <div class="landing-text">
+            <button class="hamburger-button" onclick="toggleMobileMenu(this)">
+                <img src="assets\images\Hamburger.svg" width="45px" alt="Hamburger Icon">
+                <ul class="mobile-menu">
+                    <a href="index.html">Home</a>
+                    <a href="showroom.html">Showroom</a>
+                    <a href="services.html">Services</a>
+                    <a href="cart.html">My Cart</a>
+                </ul>
+            </button>
+
+
+            <h1 data-value="IKEA Showroom">IKEA Showroom</h1>
+            <h3>Designed for life.</h3>
+            <button class="start-button"
+                onclick="document.getElementById('ikea-card').scrollIntoView({ behavior: 'smooth' });"></button>
+        </div>
+        <div class="landing-visual"></div>
+        <nav class="navbar">
+            <img src="assets\images\ikea-logo.svg" alt="IKEA Logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="showroom.html">Showroom</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </section>
+    
+</body>
+</html>

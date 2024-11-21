@@ -43,7 +43,13 @@ h2, h3 {
     height: 100vh;
     display: flex;
 }
-
+.landing.showroom {
+    background-image: url('assets\\images\\landing-showroom.png');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
 .landing-text {
     display: flex;
     flex-direction: column;
@@ -155,12 +161,12 @@ h2, h3 {
     right: 25%;
     align-items: center;
     border-radius: 15px;
-    height: 3.2rem;
+    height: 2.9rem;
     padding: 1rem 1rem;
     margin: 1rem;
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(20px);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     bottom: 0;
     max-width: 50%;
     transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
@@ -344,9 +350,10 @@ h2, h3 {
 }
 
 .footer {
-    background-color: #0058A3;
-    color: white;
-    padding: 48px 0;
+    background: rgb(211,209,209);
+    background: linear-gradient(90deg, rgba(228,228,228,1) 0%, rgba(235,227,146,1) 35%, rgba(179,190,245,1) 100%); 
+    color: black;
+    padding: 45px 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     margin-top: 2rem;
   }
@@ -380,7 +387,7 @@ h2, h3 {
   }
   
   .footer-links a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 14px;
   }
@@ -390,9 +397,9 @@ h2, h3 {
   }
   
   .footer-bottom {
-    margin-top: 48px;
+    margin-top: 24px;
     padding-top: 24px;
-    border-top: 1px solid rgba(255,255,255,0.2);
+    border-top: 1px solid rgba(0,0,0,1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -404,7 +411,7 @@ h2, h3 {
   }
   
   .footer-legal a {
-    color: white;
+    color: black;
     text-decoration: none;
     margin-right: 24px;
   }
@@ -646,7 +653,6 @@ h2, h3 {
         transform: rotateY(360deg);
     }
     .topsellers-grid {
-
         grid-template-columns: repeat(2, 1fr);
     }
     .apply-button {

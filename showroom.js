@@ -59,3 +59,17 @@ function updateShowroom() {
   var p = document.getElementById("showroom-desc");
   p.innerText = showrooms[index].description;
 }
+
+function updateInfoBar() {
+  var infoBar = document.getElementById("info-bar");
+  let width = window.innerWidth;
+  if (width > 850) {
+    infoBar.style.height = "20%";
+    return;
+  }
+  let height = window.innerHeight;
+  let image_height = (width / 16) * 9;
+  infoBar.style.height = `${height - image_height}px`;
+}
+// bind to onresize event
+window.onresize = updateInfoBar;

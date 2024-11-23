@@ -12,10 +12,18 @@ const initialImages = [
   "assets/images/image10.png",
 ];
 
+// Function to shuffle an array
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 // Function to generate new images dynamically
 const getNewImages = () => {
-  // Replace with logic to fetch/generate new images
-  return [
+  const allImages = [
     "assets/images/image1.png",
     "assets/images/image2.png",
     "assets/images/image3.png",
@@ -27,8 +35,11 @@ const getNewImages = () => {
     "assets/images/image9.png",
     "assets/images/image10.png",
   ];
-};
 
+  // Shuffle the array and return a subset of images
+  const shuffledImages = shuffle(allImages);
+  return shuffledImages.slice(0, 10); // Adjust the number of images as needed
+};
 // Reference to the grid container
 const grid = document.getElementById("topsellers-grid");
 

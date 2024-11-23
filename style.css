@@ -3,13 +3,14 @@
     src: url('assets\\fonts\\Montserrat-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-  }
+}
+
 @font-face {
     font-family: 'Montserrat';
     src: url('assets\\fonts\\Montserrat-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
-} 
+}
 
 * {
     font-family: 'Montserrat', sans-serif;
@@ -24,11 +25,14 @@
 body {
     background-color: #f2f2f2;
     overflow-x: hidden;
-    
+
 }
-h2, h3 {
+
+h2,
+h3 {
     font-weight: bold;
 }
+
 .landing {
     background-image: url('assets\\images\\modern-white-minimalist-interior-kitchen-sofa.jpg');
     background-size: cover;
@@ -44,6 +48,7 @@ h2, h3 {
     height: 100vh;
     display: flex;
 }
+
 .landing.showroom {
     background-image: url('assets\\images\\landing-showroom.png');
     background-size: cover;
@@ -51,6 +56,7 @@ h2, h3 {
     height: 100vh;
     display: flex;
 }
+
 .landing-text {
     display: flex;
     flex-direction: column;
@@ -68,11 +74,13 @@ h2, h3 {
     font-weight: bold;
     color: #333;
 }
+
 .landing-text h3 {
     font-size: 1.5rem;
     color: #333;
     font-weight: normal;
 }
+
 .landing-text p {
     font-size: 1.5rem;
     color: #333;
@@ -83,6 +91,7 @@ h2, h3 {
     background-color: transparent;
     flex-grow: 5;
 }
+
 .hamburger-button {
     display: none;
     position: absolute;
@@ -91,6 +100,7 @@ h2, h3 {
     left: 2rem;
     border: none;
 }
+
 .mobile-menu {
     display: flex;
     position: fixed;
@@ -120,7 +130,8 @@ h2, h3 {
     opacity: 1;
     transform: translateX(0);
 }
-.mobile-menu a{
+
+.mobile-menu a {
     text-decoration: none;
     color: white;
     font-size: 1rem;
@@ -143,18 +154,27 @@ h2, h3 {
     align-self: center;
     animation: bounce 1.5s infinite;
 }
+
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateY(0);
     }
+
     40% {
         transform: translateY(-20px);
     }
+
     60% {
         transform: translateY(-10px);
     }
 
 }
+
 .navbar {
     display: flex;
     position: absolute;
@@ -170,16 +190,21 @@ h2, h3 {
     font-size: 1.1rem;
     bottom: 0;
     max-width: 50%;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    /* Smooth transition */
 }
+
 /* Fixed navbar style */
 .navbar.fixed {
-    position: fixed; /* Fix to the top */
+    position: fixed;
+    /* Fix to the top */
     top: 0;
-    opacity: 1; /* Fully visible */
-    z-index: 1000; /* Ensure it stays above other elements */
-  }
-  
+    opacity: 1;
+    /* Fully visible */
+    z-index: 1000;
+    /* Ensure it stays above other elements */
+}
+
 .navbar ul {
     display: flex;
     flex-direction: row;
@@ -201,7 +226,7 @@ h2, h3 {
 
 }
 
-.navbar ul li a{
+.navbar ul li a {
     text-decoration: none;
     color: #fff;
 }
@@ -212,46 +237,67 @@ h2, h3 {
 
 .promotion-container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
 }
 
 .promotion-item {
-    perspective: 1000px; /* Creates 3D perspective for the flip effect */
-    width: 80%; /* Adjust based on your needs */
+    perspective: 1000px;
+    /* Creates 3D perspective for the flip effect */
+    width: 25rem;
     height: auto;
     aspect-ratio: 4/5;
     position: relative;
-    margin: 3rem;
+    margin: 1rem;
+
 }
 
 .card-front,
 .card-back {
     position: absolute;
-    width: 100%;
     height: 100%;
-    backface-visibility: hidden; /* Hides the back of the card when flipped */
-    transition: transform 0.6s ease; /* Smooth transition for the flip */
+    backface-visibility: hidden;
+    /* Hides the back of the card when flipped */
+    transition: transform 0.6s ease;
+    /* Smooth transition for the flip */
     border-radius: 15px;
     border: 1px solid #333;
-    padding: 3rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
 .card-front {
     background-color: rgb(217, 213, 208);
     transform: rotateY(0deg);
+    
 }
 
 .card-back {
     background-color: rgb(205, 206, 215);
-    transform: rotateY(180deg); /* Initially rotated */
+    transform: rotateY(180deg);
+    /* Initially rotated */
 }
 
 .card-front img {
     object-fit: cover;
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+.card-front h3,
+.card-front p {
+    margin-bottom: auto;
 }
 
 .promotion-item:hover .card-front {
@@ -271,18 +317,20 @@ h2, h3 {
 .new-arrivals h2 {
     margin-bottom: 2rem;
 }
+
 .new-arrivals h3 {
     margin-bottom: 1rem;
 }
+
 .buy-button {
     background-color: #333;
     color: #fff;
-    margin-top: 1rem;
     padding: 1rem 1.5rem;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-}
+    margin-top: 1rem; /* Optional: Space above the button */
+  }
 
 .new-arrivals-container {
     padding: 3rem;
@@ -290,18 +338,22 @@ h2, h3 {
     border-radius: 15px;
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem; /* Add spacing between items */
+    gap: 3rem;
+    /* Add spacing between items */
 }
-.new-arrivals-image img{
+
+.new-arrivals-image img {
     object-fit: cover;
-    max-width: 100%; /* Set a max width */
+    max-width: 100%;
+    /* Set a max width */
     height: auto;
     border-radius: 15px;
 }
 
 .new-arrivals-image {
     position: relative;
-    flex-basis: 60%; /* Image will try to take up half the container */
+    flex-basis: 60%;
+    /* Image will try to take up half the container */
 }
 
 .new-arrivals-container-info {
@@ -326,7 +378,7 @@ h2, h3 {
     padding: 3rem 3rem 0rem 3rem;
     margin-bottom: 10rem;
     overflow-x: hidden;
-    
+
 
 }
 
@@ -337,32 +389,42 @@ h2, h3 {
 
 .progress-bar-container {
     width: 100%;
-    background-color: rgb(60, 60, 60); /* Light grey background */
-    border-radius: 15px; /* Rounded corners */
-    height: 15px; /* Thin height */
-    overflow: hidden; /* Ensures the progress doesn't spill over */
+    background-color: rgb(60, 60, 60);
+    /* Light grey background */
+    border-radius: 15px;
+    /* Rounded corners */
+    height: 15px;
+    /* Thin height */
+    overflow: hidden;
+    /* Ensures the progress doesn't spill over */
     padding: 0.1rem;
     margin-bottom: 1rem;
 }
 
 .progress-bar {
     height: 100%;
-    background-color: rgb(170, 170, 200); /* Green color for progress */
-    border-radius: 15px; /* Rounded corners for the progress itself */
-    transition: width 0.4s ease; /* Smooth transition when updating progress */
+    background-color: rgb(170, 170, 200);
+    /* Green color for progress */
+    border-radius: 15px;
+    /* Rounded corners for the progress itself */
+    transition: width 0.4s ease;
+    /* Smooth transition when updating progress */
 }
+
 .showroom {
     position: relative;
     height: 100vh;
 }
+
 .arrow-controls button {
     background-color: transparent;
     border: none;
     border-radius: 50%;
     width: 2rem;
     height: 2rem;
-    cursor: pointer;    
+    cursor: pointer;
 }
+
 .info-bar {
     height: 20%;
     width: 100%;
@@ -374,97 +436,99 @@ h2, h3 {
     display: flex;
     justify-content: space-around;
     gap: 1rem;
-    
+
 }
+
 .featured-image {
     height: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 15px;
-
+    border: 0.2rem solid #bababa;
 }
+
 .info-bar p {
     flex-basis: 70%;
     text-overflow: ellipsis;
     display: block;
-    overflow: hidden;     
+    overflow: hidden;
     min-width: 70%;
 }
 
 .footer {
-    background-image: linear-gradient(90deg, rgba(228,228,228,0.5) 0%, rgba(235,227,146,0.5) 35%, rgba(179,190,245,0.5) 100%);
+    background-image: linear-gradient(90deg, rgba(228, 228, 228, 0.5) 0%, rgba(235, 227, 146, 0.5) 35%, rgba(179, 190, 245, 0.5) 100%);
     color: black;
     padding: 45px 0;
     font-family: 'Montserrat', sans-serif;
-  }
-  
-  .footer-container {
+}
+
+.footer-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
-  }
-  
-  .footer-grid {
+}
+
+.footer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 32px;
-  }
-  
-  .footer-column h3 {
+}
+
+.footer-column h3 {
     font-size: 16px;
     margin-bottom: 16px;
     font-weight: bold;
-  }
-  
-  .footer-links {
+}
+
+.footer-links {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-  
-  .footer-links li {
+}
+
+.footer-links li {
     margin-bottom: 12px;
-  }
-  
-  .footer-links a {
+}
+
+.footer-links a {
     color: black;
     text-decoration: none;
     font-size: 14px;
-  }
-  
-  .footer-links a:hover {
+}
+
+.footer-links a:hover {
     text-decoration: underline;
-  }
-  
-  .footer-bottom {
+}
+
+.footer-bottom {
     margin-top: 24px;
     padding-top: 24px;
-    border-top: 1px solid rgba(0,0,0,1);
+    border-top: 1px solid rgba(0, 0, 0, 1);
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-  }
-  
-  .footer-legal {
+}
+
+.footer-legal {
     font-size: 12px;
-  }
-  
-  .footer-legal a {
+}
+
+.footer-legal a {
     color: black;
     text-decoration: none;
     margin-right: 24px;
-  }
-  
-  .footer-copyright {
+}
+
+.footer-copyright {
     font-size: 12px;
-  }
-  
+}
+
 
 
 .translucent-fade-in-top {
     position: absolute;
-    background: linear-gradient(rgb(242, 242, 242) 0%,rgba(242, 242, 242,0) 70%);
+    background: linear-gradient(rgb(242, 242, 242) 0%, rgba(242, 242, 242, 0) 70%);
     height: 100px;
     width: 100%;
     top: 90px;
@@ -473,7 +537,7 @@ h2, h3 {
 
 .translucent-fade-in-bot {
     position: absolute;
-    background: linear-gradient(rgba(242, 242, 242,0) 0%,rgb(242, 242, 242) 70%);
+    background: linear-gradient(rgba(242, 242, 242, 0) 0%, rgb(242, 242, 242) 70%);
     height: 100px;
     width: 100%;
     bottom: -50px;
@@ -486,20 +550,22 @@ h2, h3 {
     grid-template-columns: repeat(5, 1fr);
     gap: 16px;
 }
-  
+
 .topsellers-grid img {
     width: 100%;
     height: auto;
     transition: opacity 1s, transform 1s;
     animation: 1s linear fadein;
-    
+
 
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    aspect-ratio: 4/5.5; /* Square aspect ratio */
+    height: auto;
+    /* Maintain aspect ratio */
+    aspect-ratio: 4/5.5;
+    /* Square aspect ratio */
     object-fit: cover;
 }
-  
+
 .fade-out {
     opacity: 0;
     transform: translateY(-20px);
@@ -507,18 +573,20 @@ h2, h3 {
 
 @keyframes fadein {
     from {
-      opacity: 0;
-      transform: translateY(20px);
+        opacity: 0;
+        transform: translateY(20px);
     }
-  
+
     to {
-      opacity: 1;
+        opacity: 1;
         transform: translateY(0);
     }
-  }
+}
+
 .landing.services {
     margin-bottom: 0;
 }
+
 .ikea-membership {
     background-image: url('assets\\images\\ikea-membership.png');
     background-size: cover;
@@ -535,6 +603,7 @@ h2, h3 {
     padding-right: 3rem;
     color: white;
 }
+
 .membership-container h2 {
     position: absolute;
     top: 0;
@@ -542,6 +611,7 @@ h2, h3 {
     padding: 3rem;
     color: white;
 }
+
 .membership-container {
     display: flex;
     flex-direction: column;
@@ -553,11 +623,13 @@ h2, h3 {
     padding: 3rem;
 
 }
+
 .card-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .membership-card {
     width: 40%;
     aspect-ratio: 7/4;
@@ -577,12 +649,13 @@ h2, h3 {
     cursor: pointer;
     background-image: url("assets/images/ikea-membership-card.png");
     background-size: cover;
-    
+
 }
+
 .apply-button {
     position: absolute;
     bottom: 0;
-    right:  0;
+    right: 0;
     padding: 1.5rem;
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(10px);
@@ -595,15 +668,18 @@ h2, h3 {
     padding: 3rem 3rem 0rem 3rem;
     overflow-x: hidden;
 }
+
 .about-us-container {
     display: flex;
     flex-direction: row;
     gap: 3rem;
     margin-top: 2rem;
 }
+
 .about-us-container p {
     line-height: 1.5rem;
 }
+
 .about-us-container img {
     object-fit: cover;
     max-width: 40%;
@@ -614,11 +690,13 @@ h2, h3 {
 .sustainability-pledge {
     padding: 3rem 3rem 0rem 3rem;
 }
+
 .sustainability-container p {
     margin-top: 2rem;
     line-height: 1.5rem;
     flex-basis: 60%;
 }
+
 .sustainability-container {
     display: flex;
     flex-direction: row;
@@ -633,49 +711,92 @@ h2, h3 {
     height: auto;
 }
 
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 370px) {
+    .promotion-item {
+        aspect-ratio: 4/6;
+    }
+
+    .card-back p {
+        font-size: 0.8rem;
+    }
+
+    .card-back h3 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .promotion-item {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 850px) {
 
     .landing-text h1 {
         font-size: 2rem;
     }
+
     .landing-text h3 {
         font-size: 1rem;
     }
+
     /* Hide Navbar */
     .navbar {
         display: none;
     }
+
     .hamburger-button {
         display: block;
     }
 
     .promotion-container {
         flex-direction: column;
+
     }
-    .promotion-item {
-        width: 100%;
+
+    .promotions {
+        margin: 3rem 0rem;
     }
+
+    .promotions h2 {
+        margin-left: 3rem;
+    }
+
+    .buy-button {
+        padding: 0.5rem 1rem;
+    }
+
+    .card-front img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+    }
+
     .card-back {
         padding: 1rem;
     }
 
-    .new-arrivals-image  {
+    .new-arrivals-image {
         flex-basis: 100%;
     }
 
     .new-arrivals-container {
         padding: 2rem;
     }
+
     .price-tag {
         padding: 0.5rem;
     }
+
     .footer-bottom {
         flex-direction: column;
         text-align: center;
         gap: 16px;
-      }
-      
-      .footer-legal a {
+    }
+
+    .footer-legal a {
         display: block;
         margin: 8px 0;
     }
@@ -683,19 +804,23 @@ h2, h3 {
     .promotion-item.touch-hover-end .card-front {
         transform: rotateY(0deg);
     }
-    .promotion-item.touch-hover-end  .card-back {
+
+    .promotion-item.touch-hover-end .card-back {
         transform: rotateY(180deg);
     }
+
     .promotion-item.touch-hover-start .card-front {
         transform: rotateY(180deg);
     }
-    
-    .promotion-item.touch-hover-start  .card-back {
+
+    .promotion-item.touch-hover-start .card-back {
         transform: rotateY(360deg);
     }
+
     .topsellers-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .apply-button {
         padding: 1.5rem;
         font-size: 1.5rem;
@@ -704,23 +829,30 @@ h2, h3 {
     .membership-card {
         width: 100%;
     }
+
     .membership-container {
         padding: 1.5rem;
     }
+
     .sustainability-container iframe {
         width: 100%;
     }
+
     .about-us-container img {
         max-width: 100%;
     }
+
     .about-us-container {
         flex-direction: column;
     }
+
     .sustainability-container {
         flex-direction: column;
         align-items: center;
     }
-    .info-bar p, .info-bar h3{
+
+    .info-bar p,
+    .info-bar h3 {
         display: none;
     }
 }

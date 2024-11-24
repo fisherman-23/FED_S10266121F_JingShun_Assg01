@@ -17,12 +17,14 @@
     <section class="cart">
         <div class="cart-container">
             <h1>My Cart</h1>
-            <h2>Total: $X.XX</h2>
+            <h2 id="total-cost">Total: $X.XX</h2>
+            <h3 id="previous-total"></h2>
             
             <h3>Promo Code</h3>
+            <p id="promo-status"></p>
             
             <div style="display: flex; flex-direction: row; margin-bottom: 1rem";>
-                <input type="text" id="promo" name="promo" placeholder="Enter your promo code (optional)">
+                <input type="text" id="promo-code" name="promo-code" placeholder="Enter your promo code (optional)">
                 <button class="promo-button" onclick="applyPromo()">Apply</button>
             </div>
             <h3>Address</h3>

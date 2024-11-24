@@ -744,26 +744,35 @@ h3 {
     font-weight: bold;
     color: rgba(0, 51, 153, 0.8)
 }
+
 .cart-container h2 {
     font-size: 2rem;
     font-weight: normal;
     margin-bottom: 2rem;
 }
+
 .cart-container h3 {
     font-size: 1.5rem;
     font-weight: normal;
     margin-bottom: 1rem;
 }
+
 .cart {
     padding: 0.5rem 3rem 3rem 3rem;
     display: flex;
     gap: 1rem;
 }
+
+#previous-total {
+    margin: 0;
+    text-decoration: line-through
+}
+
 .cart-items {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    flex-basis: 50%;
+        flex-basis: 50%;
     margin: 1rem;
 }
 .cart-item img{

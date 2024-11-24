@@ -757,14 +757,27 @@ h3 {
 .cart {
     padding: 0.5rem 3rem 3rem 3rem;
     display: flex;
+    gap: 1rem;
 }
 .cart-items {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     flex-basis: 50%;
+    margin: 1rem;
 }
-
+.cart-item img{
+    height: 100%;
+}
+.cart-item {
+    display: flex;
+    gap: 1rem;
+    height: 8rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-image: linear-gradient(90deg, rgba(228,228,228,1) 0%, rgba(255,204,0,1) 35%, rgba(28,78,179,1) 100%);
+    border-radius: 15px;
+}
 .checkout-button {
     background-color: rgba(0, 51, 153, 0.8);
 
@@ -966,6 +979,14 @@ input, select, textarea {
     }
     .cart {
         flex-direction: column;
+        padding: 2rem;
+    }
+    .back-button {
+        margin-left: 2rem;
+    }
+    .cart-items {
+        margin: 0rem;
+       
     }
 
 }

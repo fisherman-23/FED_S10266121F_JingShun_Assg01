@@ -1,0 +1,23 @@
+{
+    "products": {
+      "0": {
+        "name": "MARIUS Table",
+        "price": 499.99,
+        "image": "ikea_white_table.png",
+        "description": "A stylish modern sofa with comfortable cushioning and a sleek design."
+      },
+      "1": {
+        "name": "POANG Table",
+        "price": 299.99,
+        "image": "ikea_blue_chair.png",
+        "description": "A sturdy wooden dining table that seats up to six people."
+      },
+      "2": {
+        "name": "FREDRIKSJÖN Bath Towel",
+        "price": 149.99,
+        "image": "ikea_blue_towel.png",
+        "description": "An ergonomic office chair with lumbar support and adjustable height."
+      }
+    }
+  }
+  

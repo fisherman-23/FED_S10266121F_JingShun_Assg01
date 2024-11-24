@@ -787,6 +787,14 @@ h3 {
     background-image: linear-gradient(90deg, rgba(228,228,228,1) 0%, rgba(255,204,0,1) 35%, rgba(28,78,179,1) 100%);
     border-radius: 15px;
 }
+.cart-item div input {
+    width: 3rem;
+    padding: 0.5rem;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    
+}
 .checkout-button {
     background-color: rgba(0, 51, 153, 0.8);
 
@@ -823,6 +831,7 @@ input, select, textarea {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    background-color: transparent;
 }
 .back-button {
     border: none;

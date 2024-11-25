@@ -330,14 +330,21 @@ h3 {
 }
 
 .buy-button {
-    background-color: #333;
+    background: linear-gradient(to right, #0553b9 0%, #333 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
     color: #fff;
     padding: 1rem 1.5rem;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    margin-top: 1rem; /* Optional: Space above the button */
-  }
+    margin-top: 1rem;
+    transition: background-position 0.3s ease-out;
+}
+
+.buy-button:hover {
+    background-position: left bottom;
+}
 
 .new-arrivals-container {
     padding: 3rem;
@@ -794,6 +801,18 @@ h3 {
     border: 1px solid #ffffff;
     border-radius: 5px;
     
+}
+
+.remove-button {
+    background-image: url('assets/images/Remove.svg');
+    height: 40%;
+    aspect-ratio: 1/1;
+    border: none;
+    background-color: transparent;
+    margin-left: auto;
+    cursor: pointer;
+    align-self: center;
+
 }
 .checkout-button {
     background-color: rgba(0, 51, 153, 0.8);

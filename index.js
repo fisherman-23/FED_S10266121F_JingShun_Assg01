@@ -89,3 +89,17 @@ elements.forEach((element) => {
     console.log("Touch event started");
   });
 });
+
+function addToCart(id) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const existingItem = cart.find((item) => item.id === id);
+  if (existingItem) {
+    existingItem.qty++;
+  } else {
+    cart.push({ id, qty: 1 });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  console.log(JSON.parse(localStorage.getItem("cart")));
+}

@@ -5,10 +5,10 @@ let items11 = [
 ];
 let globalTotalCost = 0;
 let promoCodeApplied = false;
-localStorage.clear();
+// localStorage.clear();
 
 // Store each object in localStorage with a unique key
-localStorage.setItem("cart", JSON.stringify(items11));
+//localStorage.setItem("cart", JSON.stringify(items11));
 
 // Retrieve all objects from localStorage
 const cart = JSON.parse(localStorage.getItem("cart"));
@@ -28,6 +28,14 @@ fetch("products.json")
 function addCartItems(productData) {
   const cartContainer = document.getElementById("cart-items");
   let items = JSON.parse(localStorage.getItem("cart"));
+
+  // if there are no items in the cart, display a message
+  if (items.length === 0) {
+    const emptyCart = document.createElement("h2");
+    emptyCart.textContent = "Your cart is empty!";
+    cartContainer.appendChild(emptyCart);
+    return;
+  }
 
   items.forEach((item) => {
     const product = productData[item.id];
@@ -61,6 +69,20 @@ function addCartItems(productData) {
     };
     qty.addEventListener("change", () => updateCart(productData));
 
+    const removeButton = document.createElement("button");
+    removeButton.className = "remove-button";
+    removeButton.onclick = () => {
+      cartContainer.removeChild(cartItem);
+      items = items.filter((cartItem) => cartItem.id !== item.id);
+      localStorage.setItem("cart", JSON.stringify(items));
+      updateTotalCost(productData);
+      if (items.length === 0) {
+        const emptyCart = document.createElement("h2");
+        emptyCart.textContent = "Your cart is empty!";
+        cartContainer.appendChild(emptyCart);
+      }
+    };
+
     detailsDiv.appendChild(title);
     detailsDiv.appendChild(price);
     detailsDiv.appendChild(qty);
@@ -68,6 +90,7 @@ function addCartItems(productData) {
     // Combine elements
     cartItem.appendChild(img);
     cartItem.appendChild(detailsDiv);
+    cartItem.appendChild(removeButton);
 
     // Add to container
     cartContainer.appendChild(cartItem);

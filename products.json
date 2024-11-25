@@ -1,23 +1,82 @@
 {
-    "products": {
-      "0": {
-        "name": "MARIUS Table",
-        "price": 499.99,
-        "image": "ikea_white_table.png",
-        "description": "A stylish modern sofa with comfortable cushioning and a sleek design."
-      },
-      "1": {
-        "name": "POANG Table",
-        "price": 299.99,
-        "image": "ikea_blue_chair.png",
-        "description": "A sturdy wooden dining table that seats up to six people."
-      },
-      "2": {
-        "name": "FREDRIKSJÖN Bath Towel",
-        "price": 149.99,
-        "image": "ikea_blue_towel.png",
-        "description": "An ergonomic office chair with lumbar support and adjustable height."
-      }
+  "products": {
+    "0": {
+      "name": "MARIUS Table",
+      "price": 120.99,
+      "image": "ikea_white_table.png",
+      "description": "A stylish modern sofa with comfortable cushioning and a sleek design."
+    },
+    "1": {
+      "name": "POANG Table",
+      "price": 150.99,
+      "image": "ikea_blue_chair.png",
+      "description": "A sturdy wooden dining table that seats up to six people."
+    },
+    "2": {
+      "name": "FREDRIKSJÖN Bath Towel",
+      "price": 25.99,
+      "image": "ikea_blue_towel.png",
+      "description": "An ergonomic office chair with lumbar support and adjustable height."
+    },
+    "3": {
+      "name": "BLÅHAJ Soft Toy",
+      "price": 29.99,
+      "image": "ikea_shark_toy.png",
+      "description": "A cuddly shark soft toy, perfect for kids and adults alike."
+    },
+    "4": {
+      "name": "DJUNGELSKOG Soft Toy",
+      "price": 19.99,
+      "image": "ikea_animal_toys.png",
+      "description": "A collection of animal soft toys, bringing joy to every child."
+    },
+    "5": {
+      "name": "INGATORP Dining Table",
+      "price": 199.99,
+      "image": "ikea_wooden_table.png",
+      "description": "A classic wooden dining table with a timeless design."
+    },
+    "6": {
+      "name": "HEMNES Drawer",
+      "price": 159.99,
+      "image": "ikea_wooden_drawer.png",
+      "description": "A durable wooden drawer unit to keep your space organized."
+    },
+    "7": {
+      "name": "GRUNDTAL Tray Rack",
+      "price": 49.99,
+      "image": "ikea_green_tray_rack.png",
+      "description": "A practical green tray rack, ideal for kitchens and storage."
+    },
+    "8": {
+      "name": "KNAPPA Ceiling Lamp",
+      "price": 69.99,
+      "image": "ikea_ceiling_lamp.png",
+      "description": "A stylish ceiling lamp that brightens up any room."
+    },
+    "9": {
+      "name": "KIVIK Sofa",
+      "price": 499.99,
+      "image": "ikea_sofa.png",
+      "description": "A spacious and comfortable sofa with a modern touch."
+    },
+    "10": {
+      "name": "VINTERFINT Christmas Tree",
+      "price": 79.99,
+      "image": "ikea_christmas_tree.png",
+      "description": "A festive artificial Christmas tree, easy to assemble."
+    },
+    "11": {
+      "name": "VINTERFINT Jingle Bells",
+      "price": 14.99,
+      "image": "ikea_jingle_bells.png",
+      "description": "A set of decorative jingle bells for your holiday decorations."
+    },
+    "12": {
+      "name": "LÖVBACKEN Glass Table",
+      "price": 149.99,
+      "image": "ikea_glass_table.png",
+      "description": "A sleek glass table with a minimalist design."
     }
   }
-  
+}

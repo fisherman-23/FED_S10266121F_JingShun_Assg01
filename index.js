@@ -21,6 +21,11 @@ function shuffle(array) {
   return array;
 }
 
+// generate array of random numbers from 0 to n, where n is the length of the array
+function randomArray(n) {
+  return Array.from({ length: n }, (_, i) => i);
+}
+
 // Function to generate new images dynamically
 const getNewImages = () => {
   const allImages = [
@@ -52,6 +57,9 @@ function populateGrid(images) {
     img.classList.add("fade-in");
     let div = document.createElement("div");
     div.classList.add("topseller-item");
+    div.onclick = () => {
+      openProductPopUp();
+    };
     div.appendChild(img);
     grid.appendChild(div);
   });
@@ -77,6 +85,8 @@ populateGrid(initialImages);
 
 // Update the grid every 7 seconds
 setInterval(updateGrid, 7000);
+
+// Enable for mobile, touch events for hover effect
 const elements = document.querySelectorAll(".promotion-item");
 
 elements.forEach((element) => {
@@ -105,4 +115,21 @@ function addToCart(id) {
 
   localStorage.setItem("cart", JSON.stringify(cart));
   console.log(JSON.parse(localStorage.getItem("cart")));
+}
+
+function openProductPopUp() {
+  const background = document.querySelector(".popup-bg");
+  const popup = document.querySelector(".product-popup");
+  popup.classList.add("active");
+  popup.focus();
+  background.classList.add("active");
+  console.log("Opening product popup");
+}
+
+function closeProductPopUp() {
+  const background = document.querySelector(".popup-bg");
+  background.classList.remove("active");
+  const popup = document.querySelector(".product-popup");
+  popup.classList.remove("active");
+  console.log("Closing product popup");
 }

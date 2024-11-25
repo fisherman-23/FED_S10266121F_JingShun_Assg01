@@ -16,6 +16,11 @@
 </head>
 
 <body>
+    <div class="popup-bg" >
+        <div class="product-popup" onblur="closeProductPopUp()" tabindex="-1">
+
+        </div>
+    </div>
     <section class="landing home">
         <div class="landing-text">
             <button class="hamburger-button" onclick="toggleMobileMenu(this)">
@@ -68,7 +73,7 @@
                         <h3>Current Price: $75.99</h3>
                     </div>
 
-                    <button class="buy-button" onclick="addToCart(0)">Add to cart</button>
+                    <button class="buy-button" onclick="addToCart(0)" ontouchstart="event.stopPropagation()">Add to cart</button>
                 </div>
             </div>
 
@@ -93,7 +98,7 @@
                         <h3>Current Price: $75.99</h3>
                     </div>
 
-                    <button class="buy-button" onclick="addToCart(1)">Add to cart</button>
+                    <button class="buy-button" onclick="addToCart(1)" ontouchstart="event.stopPropagation()">Add to cart</button>
                 </div>
             </div>
             <div class="promotion-item">
@@ -117,7 +122,7 @@
                         <h3>Current Price: $75.99</h3>
                     </div>
 
-                    <button class="buy-button" onclick="addToCart(2)">Add to cart</button>
+                    <button class="buy-button" onclick="addToCart(2)" ontouchstart="event.stopPropagation()">Add to cart</button>
                 </div>
             </div>
 

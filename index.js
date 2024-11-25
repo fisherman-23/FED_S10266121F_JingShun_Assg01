@@ -50,7 +50,10 @@ function populateGrid(images) {
     const img = document.createElement("img");
     img.src = src;
     img.classList.add("fade-in");
-    grid.appendChild(img);
+    let div = document.createElement("div");
+    div.classList.add("topseller-item");
+    div.appendChild(img);
+    grid.appendChild(div);
   });
 }
 

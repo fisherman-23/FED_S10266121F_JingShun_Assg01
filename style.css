@@ -11,9 +11,21 @@
     font-weight: bold;
     font-style: normal;
 }
+@font-face {
+    font-family: 'IKEASans';
+    src: url('assets\\fonts\\IKEASans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IKEASans';
+    src: url('assets\\fonts\\IKEASans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 
 * {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'IKEASans', 'Montserrat',sans-serif;
     font-weight: normal;
     font-style: normal;
     margin: 0;
@@ -471,10 +483,10 @@ h3 {
 }
 
 .footer {
-    background-image: linear-gradient(90deg, rgba(228, 228, 228, 0.5) 0%, rgba(235, 227, 146, 0.5) 35%, rgba(179, 190, 245, 0.5) 100%);
+    background-image: linear-gradient(90deg, rgba(228,228,228,1) 0%, rgba(255,204,0,1) 35%, rgba(228,228,228,1) 100%);
     color: black;
     padding: 45px 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'IKEASans', sans-serif;
 }
 
 .footer-container {
@@ -571,16 +583,18 @@ h3 {
     height: auto;
     transition: opacity 1s, transform 1s;
     animation: 1s linear fadein;
-
-
-    width: 100%;
     height: auto;
     /* Maintain aspect ratio */
     aspect-ratio: 4/5.5;
     /* Square aspect ratio */
-    object-fit: cover;
+    object-fit: contain;
 }
+.topseller-item:hover {
+    transform: scale(1.1);
+    background-color: gainsboro;
+    cursor: pointer;
 
+}
 .fade-out {
     opacity: 0;
     transform: translateY(-20px);

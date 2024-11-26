@@ -60,11 +60,13 @@ function addCartItems(productData) {
     qty.value = item.qty;
     qty.min = 1;
     qty.max = 10;
-    qty.oninput = () => {
+    qty.onchange = () => {
       qty.value = qty.value.replace(/[^0-9]/g, "");
 
       if (qty.value > 10) {
         qty.value = 10;
+      } else if (qty.value < 1) {
+        qty.value = 1;
       }
     };
     qty.addEventListener("change", () => updateCart(productData));

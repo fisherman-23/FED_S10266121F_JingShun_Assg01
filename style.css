@@ -204,8 +204,9 @@ h3 {
     font-size: 1.1rem;
     bottom: 0;
     max-width: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, opacity 0.3s ease;
-    /* Smooth transition */
+
 }
 
 /* Fixed navbar style */
@@ -231,8 +232,15 @@ h3 {
 
 .navbar ul li {
     margin-right: 1rem;
+    border-radius: 15px;
+    padding: 0.8rem 2rem;
 }
-
+.navbar ul li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.navbar ul li.selected {
+    background-color: rgba(255, 255, 255, 0.2);
+}
 .cart-button img {
     height: 1.7rem;
 }
@@ -634,7 +642,6 @@ h3 {
     transform: scale(1.1);
     background-color: gainsboro;
     cursor: pointer;
-
 }
 
 .popup-bg {
@@ -670,6 +677,7 @@ h3 {
     z-index: 1001;
     opacity: 0;
     transition: opacity 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .popup-bg.active {

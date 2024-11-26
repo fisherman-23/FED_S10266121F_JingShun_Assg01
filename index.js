@@ -46,7 +46,6 @@ function populateGrid(products) {
   products = products.slice(0, 10);
   grid.innerHTML = ""; // Clear current images
   products.forEach((product) => {
-    console.log(product);
     const img = document.createElement("img");
     img.src = "assets/images/" + product.image;
     img.classList.add("fade-in");
@@ -142,3 +141,15 @@ function closeProductPopUp() {
   popup.classList.remove("active");
   console.log("Closing product popup");
 }
+document.querySelectorAll(".buy-button").forEach((button) => {
+  button.addEventListener("click", function () {
+    console.log("Button clicked");
+    button.textContent = "Added to cart!";
+    this.classList.add("clicked"); // Add the class for the color change
+    setTimeout(() => {
+      button.textContent = "Add to cart"; // Change the text back after 1 second
+
+      this.classList.remove("clicked"); // Remove the class after 1 second
+    }, 1000); // Adjust duration to suit your effect
+  });
+});

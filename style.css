@@ -355,12 +355,48 @@ h3 {
     border-radius: 10px;
     cursor: pointer;
     margin-top: 1rem;
-    transition: background-position 0.3s ease-out;
+    transition: background-position 0.3s ease-out, transform 0.1s ease-in, background-color 0.5s ease;
+    position: relative;
+    overflow: hidden;
+    
 }
 
 .buy-button:hover {
     background-position: left bottom;
 }
+
+.buy-button:active {
+    transform: scale(0.95); /* Slight shrink for click effect */
+}
+
+.buy-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: width 0.3s ease-out, height 0.3s ease-out, opacity 0.5s ease-out;
+}
+
+.buy-button:active::after {
+    width: 200px; /* Adjust size for ripple effect */
+    height: 200px;
+    opacity: 0; /* Fades out */
+}
+
+.buy-button.clicked {
+    background-image: none;
+    background-color: #50c878; /* Green color after click */
+    color: #000;
+    transition: background-color 0.5s ease;
+}
+
 
 .new-arrivals-container {
     padding: 3rem;
@@ -886,11 +922,12 @@ margin-top: auto;
 }
 
 .cart-item div input {
-    width: 3rem;
+    width: 4rem;
     padding: 0.5rem;
     background-color: transparent;
     border: 1px solid #ffffff;
     border-radius: 5px;
+    margin-top: 0.1rem;
 
 }
 
@@ -1126,6 +1163,7 @@ textarea {
     .cart {
         flex-direction: column;
         padding: 2rem;
+        
     }
 
     .back-button {

@@ -313,6 +313,19 @@ h3 {
     transform: rotateY(180deg);
     /* Initially rotated */
 }
+.card-back h3, .card-back p {
+    margin-top: 1rem;
+}
+h3:not(:first-of-type) {
+    font-weight: normal;
+}
+.original-price {
+    font-weight: normal;
+    text-decoration: underline red .1em;
+    text-underline-offset: -.35em;
+    text-decoration-skip-ink: none;
+    color: #6e6e6e; /* optional style decision */
+}
 
 .card-front img {
     object-fit: cover;
@@ -329,6 +342,7 @@ h3 {
 .card-front h3,
 .card-front p {
     margin-bottom: auto;
+    
 }
 
 .promotion-item:hover .card-front {

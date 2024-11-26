@@ -1,16 +1,22 @@
-// Initial set of images (replace these with your own URLs)
-const initialImages = [
-  "assets/images/image1.png",
-  "assets/images/image2.png",
-  "assets/images/image3.png",
-  "assets/images/image4.png",
-  "assets/images/image5.png",
-  "assets/images/image6.png",
-  "assets/images/image7.png",
-  "assets/images/image8.png",
-  "assets/images/image9.png",
-  "assets/images/image10.png",
-];
+fetch("products.json")
+  .then((response) => response.json())
+  .then((data) => {
+    let productData = data.products;
+    let product = [];
+
+    for (let i = 3; i < Object.keys(productData).length; i++) {
+      // add to product
+      product.push(productData[i]);
+    }
+
+    // Initialize the grid with the initial set of images
+    populateGrid(product);
+
+    // Update the grid every 7 seconds
+    setInterval(() => {
+      updateGrid(product);
+    }, 7000);
+  });
 
 // Function to shuffle an array
 function shuffle(array) {
@@ -21,44 +27,33 @@ function shuffle(array) {
   return array;
 }
 
-// generate array of random numbers from 0 to n, where n is the length of the array
-function randomArray(n) {
-  return Array.from({ length: n }, (_, i) => i);
+// generate array of random numbers from 0 to n, where n is the length of the array, with exlcusion of items in the exclude array
+function randomArray(n, exclude) {
+  let arr = [];
+  for (let i = 0; i < n; i++) {
+    if (!exclude.includes(i)) {
+      arr.push(i);
+    }
+  }
+  return shuffle(arr);
 }
 
-// Function to generate new images dynamically
-const getNewImages = () => {
-  const allImages = [
-    "assets/images/image1.png",
-    "assets/images/image2.png",
-    "assets/images/image3.png",
-    "assets/images/image4.png",
-    "assets/images/image5.png",
-    "assets/images/image6.png",
-    "assets/images/image7.png",
-    "assets/images/image8.png",
-    "assets/images/image9.png",
-    "assets/images/image10.png",
-  ];
-
-  // Shuffle the array and return a subset of images
-  const shuffledImages = shuffle(allImages);
-  return shuffledImages.slice(0, 10); // Adjust the number of images as needed
-};
 // Reference to the grid container
 const grid = document.getElementById("topsellers-grid");
 
 // Function to populate grid with images
-function populateGrid(images) {
+function populateGrid(products) {
+  products = products.slice(0, 10);
   grid.innerHTML = ""; // Clear current images
-  images.forEach((src) => {
+  products.forEach((product) => {
+    console.log(product);
     const img = document.createElement("img");
-    img.src = src;
+    img.src = "assets/images/" + product.image;
     img.classList.add("fade-in");
     let div = document.createElement("div");
     div.classList.add("topseller-item");
     div.onclick = () => {
-      openProductPopUp();
+      openProductPopUp(product.id);
     };
     div.appendChild(img);
     grid.appendChild(div);
@@ -66,7 +61,7 @@ function populateGrid(images) {
 }
 
 // Function to update the grid with a fade-out effect
-function updateGrid() {
+function updateGrid(products) {
   const images = grid.querySelectorAll("img");
 
   // Add fade-out class to all images
@@ -75,16 +70,11 @@ function updateGrid() {
 
   // After the fade-out animation, replace images
   setTimeout(() => {
-    const newImages = getNewImages(); // Get new set of images
-    populateGrid(newImages); // Populate grid with new images
+    // shuffle products
+    products = shuffle(products);
+    populateGrid(products); // Populate grid with new images
   }, 1000); // Matches the transition duration in CSS
 }
-
-// Initialize the grid with the initial set of images
-populateGrid(initialImages);
-
-// Update the grid every 7 seconds
-setInterval(updateGrid, 7000);
 
 // Enable for mobile, touch events for hover effect
 const elements = document.querySelectorAll(".promotion-item");
@@ -117,7 +107,7 @@ function addToCart(id) {
   console.log(JSON.parse(localStorage.getItem("cart")));
 }
 
-function openProductPopUp() {
+function openProductPopUp(id) {
   const background = document.querySelector(".popup-bg");
   const popup = document.querySelector(".product-popup");
   popup.classList.add("active");

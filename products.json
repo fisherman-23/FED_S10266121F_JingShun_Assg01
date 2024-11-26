@@ -3,80 +3,93 @@
     "0": {
       "name": "MARIUS Table",
       "price": 120.99,
-      "image": "ikea_white_table.png",
-      "description": "A stylish modern sofa with comfortable cushioning and a sleek design."
+      "image": "ikea-white-table.png",
+      "description": "A stylish modern sofa with comfortable cushioning and a sleek design.",
+      "id": 0
     },
     "1": {
       "name": "POANG Table",
       "price": 150.99,
-      "image": "ikea_blue_chair.png",
-      "description": "A sturdy wooden dining table that seats up to six people."
+      "image": "ikea-blue-chair.png",
+      "description": "A sturdy wooden dining table that seats up to six people.",
+      "id": 1
     },
     "2": {
       "name": "FREDRIKSJÖN Bath Towel",
       "price": 25.99,
-      "image": "ikea_blue_towel.png",
-      "description": "An ergonomic office chair with lumbar support and adjustable height."
+      "image": "ikea-blue-towel.png",
+      "description": "An ergonomic office chair with lumbar support and adjustable height.",
+      "id": 2
     },
     "3": {
       "name": "BLÅHAJ Soft Toy",
       "price": 29.99,
-      "image": "ikea_shark_toy.png",
-      "description": "A cuddly shark soft toy, perfect for kids and adults alike."
+      "image": "ikea-shark-toy.png",
+      "description": "A cuddly shark soft toy, perfect for kids and adults alike.",
+      "id": 3
     },
     "4": {
       "name": "DJUNGELSKOG Soft Toy",
       "price": 19.99,
-      "image": "ikea_animal_toys.png",
-      "description": "A collection of animal soft toys, bringing joy to every child."
+      "image": "ikea-animal-toys.png",
+      "description": "A collection of animal soft toys, bringing joy to every child.",
+      "id": 4
     },
     "5": {
       "name": "INGATORP Dining Table",
       "price": 199.99,
-      "image": "ikea_wooden_table.png",
-      "description": "A classic wooden dining table with a timeless design."
+      "image": "ikea-wooden-table.png",
+      "description": "A classic wooden dining table with a timeless design.",
+      "id": 5
     },
     "6": {
       "name": "HEMNES Drawer",
       "price": 159.99,
-      "image": "ikea_wooden_drawer.png",
-      "description": "A durable wooden drawer unit to keep your space organized."
+      "image": "ikea-wooden-drawer.png",
+      "description": "A durable wooden drawer unit to keep your space organized.",
+      "id": 6
     },
     "7": {
       "name": "GRUNDTAL Tray Rack",
       "price": 49.99,
-      "image": "ikea_green_tray_rack.png",
+      "image": "ikea-green-tray-rack.png",
       "description": "A practical green tray rack, ideal for kitchens and storage."
+      ,"id": 7
     },
     "8": {
       "name": "KNAPPA Ceiling Lamp",
       "price": 69.99,
-      "image": "ikea_ceiling_lamp.png",
-      "description": "A stylish ceiling lamp that brightens up any room."
+      "image": "ikea-ceiling-lamp.png",
+      "description": "A stylish ceiling lamp that brightens up any room.",
+      "id": 8
     },
     "9": {
       "name": "KIVIK Sofa",
       "price": 499.99,
-      "image": "ikea_sofa.png",
-      "description": "A spacious and comfortable sofa with a modern touch."
+      "image": "ikea-sofa.png",
+      "description": "A spacious and comfortable sofa with a modern touch.",
+      "id": 9
     },
     "10": {
       "name": "VINTERFINT Christmas Tree",
       "price": 79.99,
-      "image": "ikea_christmas_tree.png",
-      "description": "A festive artificial Christmas tree, easy to assemble."
+      "image": "ikea-christmas-tree.png",
+      "description": "A festive artificial Christmas tree, easy to assemble.",
+      "id": 10
     },
     "11": {
       "name": "VINTERFINT Jingle Bells",
       "price": 14.99,
-      "image": "ikea_jingle_bells.png",
-      "description": "A set of decorative jingle bells for your holiday decorations."
+      "image": "ikea-jingle-bells.png",
+      "description": "A set of decorative jingle bells for your holiday decorations.",
+      "id": 11
     },
     "12": {
       "name": "LÖVBACKEN Glass Table",
       "price": 149.99,
-      "image": "ikea_glass_table.png",
-      "description": "A sleek glass table with a minimalist design."
+      "image": "ikea-glass-table.png",
+      "description": "A sleek glass table with a minimalist design.",
+      "id": 12
     }
   }
 }

@@ -16,9 +16,18 @@
 </head>
 
 <body>
-    <div class="popup-bg" >
-        <div class="product-popup" onblur="closeProductPopUp()" tabindex="-1">
-
+    <div class="popup-bg" onclick="closeProductPopUp()" >
+        <div class="product-popup" onclick="event.stopPropagation()">
+            <div class="popup-details-1">
+                <h2 id="product-title">Sample Item</h2>
+                <p id="product-price">Price: $X.XX</p>
+                <img id="product-image" src="assets\images\ikea-white-table.png" alt="Modern White Table">
+            </div>
+            <div class="popup-details-2">
+                <h3>Product Details</h3>
+                <p id="product-description">Modern Scandinavian design featuring sustainable materials with easy assembly</p>
+                <button class="buy-button" id="popup-add-to-cart-button" onclick="addToCart(0)">Add to cart</button>
+            </div>
         </div>
     </div>
     <section class="landing home">

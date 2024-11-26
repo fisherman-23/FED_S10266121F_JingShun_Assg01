@@ -110,8 +110,27 @@ function addToCart(id) {
 function openProductPopUp(id) {
   const background = document.querySelector(".popup-bg");
   const popup = document.querySelector(".product-popup");
+  // fetch product data from products.json
+  fetch("products.json")
+    .then((response) => response.json())
+    .then((data) => {
+      let productData = data.products;
+      let product = productData[id];
+      console.log(product);
+      const title = popup.querySelector("#product-title");
+      title.textContent = product.name;
+      const img = popup.querySelector("#product-image");
+      img.src = "assets/images/" + product.image;
+      const price = popup.querySelector("#product-price");
+      price.textContent = "$" + product.price;
+      const description = popup.querySelector("#product-description");
+      description.textContent = product.description;
+      const button = popup.querySelector("#popup-add-to-cart-button");
+      button.onclick = () => {
+        addToCart(product.id);
+      };
+    });
   popup.classList.add("active");
-  popup.focus();
   background.classList.add("active");
   console.log("Opening product popup");
 }

@@ -9,6 +9,7 @@ const showrooms = [
     ],
     description:
       "In this open kitchen, soft muted brown-beige sets the stage for playful contrasts and dashes of colour. It’s a look that oozes personality and flows seamlessly into the living room, making it a fun and flexible meeting point. Perfect for sharing many moments with loved ones – while easily keeping an eye on the kids.",
+    id: 14,
   },
   {
     name: "Living Room",
@@ -18,6 +19,7 @@ const showrooms = [
     ],
     description:
       "This living room is designed for a family who loves to entertain. The large sofa is perfect for movie nights and the open shelving makes it easy to grab a book or board game. The room is filled with personal touches, like the gallery wall and the plants, which make it feel like home.",
+    id: 15,
   },
   {
     name: "Bedroom",
@@ -27,6 +29,7 @@ const showrooms = [
     ],
     description:
       "This bedroom is a dream for anyone who loves to sleep in. The large bed is perfect for lazy Sundays and the open wardrobe makes it easy to find your favourite clothes. The room is filled with personal touches, like the gallery wall and the plants, which make it feel like home.",
+    id: 16,
   },
 ];
 
@@ -55,6 +58,9 @@ function updateShowroom() {
 
   var featuredImage = document.getElementById("featured-image");
   featuredImage.src = showrooms[index].images[1];
+  featuredImage.onclick = () => {
+    openProductPopUp(showrooms[index].id);
+  };
 
   var p = document.getElementById("showroom-desc");
   p.innerText = showrooms[index].description;
@@ -73,3 +79,16 @@ function updateInfoBar() {
 }
 // bind to onresize event
 window.onresize = updateInfoBar;
+function addToCart(id) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const existingItem = cart.find((item) => item.id === id);
+  if (existingItem) {
+    existingItem.qty++;
+  } else {
+    cart.push({ id, qty: 1 });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  console.log(JSON.parse(localStorage.getItem("cart")));
+}

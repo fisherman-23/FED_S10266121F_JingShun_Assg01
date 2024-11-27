@@ -2,7 +2,7 @@
   "products": {
     "0": {
       "name": "MARIUS Table",
-      "price": 120.99,
+      "price": 75.99,
       "image": "ikea-white-table.png",
       "description": "A stylish modern sofa with comfortable cushioning and a sleek design.",
       "id": 0
@@ -90,6 +90,37 @@
       "image": "ikea-glass-table.png",
       "description": "A sleek glass table with a minimalist design.",
       "id": 12
+    },
+    "13": {
+      "name": "IDNAS All in one Bed",
+      "price": 49.99,
+      "image": "ikea-bed.png",
+      "description": "A comfortable all-in-one bed with storage and a modern design.",
+      "id": 13
+    },
+    "14": {
+      "name": "Kitchen Tap",
+      "price": 99.99,
+      "image": "ikea-kitchen-tap.png",
+      "description": "A modern kitchen tap with a sleek design and easy installation.",
+      "id": 14
+
+    },
+    "15": {
+      "name": "IKEA Toy Storage",
+      "price": 39.99,
+      "image": "ikea-toy-storage.png",
+      "description": "A practical toy storage unit for kids' rooms and play areas.",
+      "id": 15
+
+
+    },
+    "16": {
+      "name": "IKEA Pillow Covers",
+      "price": 19.99,
+      "image": "ikea-pillow-cover.png",
+      "description": "A set of stylish pillow covers to refresh your living space.",
+      "id": 16
     }
   }
 }

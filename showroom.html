@@ -16,6 +16,21 @@
 </head>
 
 <body>
+    <div class="popup-bg" onclick="closeProductPopUp()">
+        <div class="product-popup" onclick="event.stopPropagation()">
+            <div class="popup-details-1">
+                <h2 id="product-title">Sample Item</h2>
+                <p id="product-price">Price: $X.XX</p>
+                <img id="product-image" src="assets\images\ikea-white-table.png" alt="Modern White Table">
+            </div>
+            <div class="popup-details-2">
+                <h3>Product Details</h3>
+                <p id="product-description">Modern Scandinavian design featuring sustainable materials with easy
+                    assembly</p>
+                <button class="buy-button" id="popup-add-to-cart-button" onclick="addToCart(0)">Add to cart</button>
+            </div>
+        </div>
+    </div>
     <section class="landing showroom">
         <div class="landing-text">
             <button class="hamburger-button" onclick="toggleMobileMenu(this)">
@@ -63,7 +78,7 @@
             </p>
             <h3>Featured</h3>
             <img class="featured-image" id="featured-image" src="assets/images/ikea-kitchen-tap.png"
-                alt="featured product image">
+                alt="featured product image" onclick="openProductPopUp(14)">
     </section>
     <footer class="footer">
         <div class="footer-container">

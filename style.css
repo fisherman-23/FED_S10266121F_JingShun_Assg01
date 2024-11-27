@@ -448,7 +448,27 @@ h3:not(:first-of-type) {
     padding: 1rem;
     flex-basis: 40%;
 }
-
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(5px); /* Apply blur effect to the background */
+}
+.new-arrivals-image:hover .image-overlay {
+    opacity: 1;
+}
+.buy-button.mobile {
+    display: none;
+}
 .price-tag {
     position: absolute;
     bottom: 4px;
@@ -534,6 +554,7 @@ h3:not(:first-of-type) {
     object-fit: cover;
     border-radius: 15px;
     border: 0.2rem solid #bababa;
+    cursor: pointer;
 }
 
 .info-bar p {
@@ -1077,7 +1098,9 @@ textarea {
     .buy-button {
         padding: 0.5rem 1rem;
     }
-
+    .buy-button.mobile {
+        display: block;
+    }
     .card-front img {
         display: block;
         margin-left: auto;
@@ -1173,6 +1196,7 @@ textarea {
     .featured-image {
         height: 5rem;
         width: 5rem;
+
     }
 
     .info-bar {

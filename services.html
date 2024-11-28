@@ -18,10 +18,13 @@
 </head>
 
 <body>
+        <!-- Landing section including navigation and hero content -->
+
     <section class="landing services">
         <div class="landing-text">
             <button class="hamburger-button" onclick="toggleMobileMenu(this)">
                 <img src="assets\images\Hamburger.svg" width="45px" alt="Hamburger Icon">
+                <!-- Mobile menu that will display when on mobile view -->
                 <ul class="mobile-menu">
                     <a href="index.html">Home</a>
                     <a href="showroom.html">Showroom</a>
@@ -34,6 +37,7 @@
 
             <h1 data-value="IKEA Services">IKEA Services</h1>
             <h3>IKEA Essentials.</h3>
+            <!-- Start button that scrolls to the IKEA Card section -->
             <button class="start-button"
                 onclick="document.getElementById('ikea-card').scrollIntoView({ behavior: 'smooth' });"></button>
         </div>
@@ -49,7 +53,7 @@
 
         </nav>
     </section>
-
+    <!-- IKEA Membership section that allows users to apply for the IKEA Card -->
     <section class="ikea-membership" id="ikea-card">
         <div class="membership-container">
             <h2>The IKEA Card</h2>
@@ -63,6 +67,7 @@
         </div>
 
     </section>
+    <!-- About us section that states IKEA's vision and goals -->
     <section class="about-us" id="about">
         <h2>About Us</h2>
 
@@ -91,6 +96,7 @@
             <img src="assets\images\ikea-about-us.png" alt="IKEA Store">
         </div>
     </section>
+    <!-- Sustainability Pledge section that states IKEA's vision for sustainability  -->
     <section class="sustainability-pledge" id="sustainability">
         <h2>Our Sustainability Pledge</h2>
         <div class="sustainability-container">

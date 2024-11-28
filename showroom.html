@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <!-- Popup for product details -->
     <div class="popup-bg" onclick="closeProductPopUp()">
         <div class="product-popup" onclick="event.stopPropagation()">
             <div class="popup-details-1">
@@ -23,6 +24,7 @@
                 <p id="product-price">Price: $X.XX</p>
                 <img id="product-image" src="assets\images\ikea-white-table.png" alt="Modern White Table">
             </div>
+            <!-- Product Details -->
             <div class="popup-details-2">
                 <h3>Product Details</h3>
                 <p id="product-description">Modern Scandinavian design featuring sustainable materials with easy
@@ -57,19 +59,23 @@
                 <li class="selected"><a href="showroom.html">Showroom</a></li>
                 <li><a href="services.html">Services</a></li>
             </ul>
-            <a href="cart.html" class="cart-button"><img src="assets\images\ShoppingCartSimple.svg" alt="Cart Icon" ></a>
+            <a href="cart.html" class="cart-button"><img src="assets\images\ShoppingCartSimple.svg" alt="Cart Icon"></a>
 
         </nav>
     </section>
+    <!-- Showroom section with featured product -->
     <section class="showroom" id="showroom" style="background-image: url('assets\\images\\ikea-kitchen.png');">
         <div class="info-bar" id="info-bar">
             <div>
+                <!-- Showroom name and arrow controls -->
+
                 <h2 id="showroom-name">Kitchen</h2>
                 <div class="arrow-controls">
                     <button onclick="previous()"><img src="assets/images/ArrowCircleLeft.svg"></button>
                     <button onclick="next()"><img src="assets/images/ArrowCircleRight.svg"></button>
                 </div>
             </div>
+
             <p id="showroom-desc"> In this open kitchen, soft muted brown-beige sets the stage for playful contrasts and
                 dashes of colour. It’s a look
                 that oozes personality and flows seamlessly into the living room, making it a fun and flexible meeting
@@ -80,6 +86,7 @@
             <img class="featured-image" id="featured-image" src="assets/images/ikea-kitchen-tap.png"
                 alt="featured product image" onclick="openProductPopUp(14)">
     </section>
+    <!-- Footer section-->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-grid">

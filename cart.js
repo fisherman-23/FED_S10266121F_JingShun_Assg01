@@ -1,8 +1,4 @@
-let items11 = [
-  { id: 0, qty: "1" },
-  { id: 1, qty: "1" },
-  { id: 2, qty: "1" },
-];
+// Define global variables
 let globalTotalCost = 0;
 let globalName = "User";
 let promoCodeApplied = false;
@@ -39,10 +35,12 @@ function addCartItems(productData) {
   }
 
   items.forEach((item) => {
+    // Get product details
     const product = productData[item.id];
     const cartItem = document.createElement("div");
     cartItem.className = "cart-item";
 
+    // Add product image
     const img = document.createElement("img");
     img.src = `assets/images/${product.image}`;
     img.alt = `Product ${product.name}`;
@@ -56,22 +54,21 @@ function addCartItems(productData) {
     const price = document.createElement("p");
     price.textContent = `$${product.price.toFixed(2)}`;
 
+    // Add quantity input
     const qty = document.createElement("input");
     qty.type = "number";
     qty.value = item.qty;
     qty.min = 1;
-    qty.max = 10;
+
     qty.onchange = () => {
       qty.value = qty.value.replace(/[^0-9]/g, "");
 
-      if (qty.value > 10) {
-        qty.value = 10;
-      } else if (qty.value < 1) {
+      if (qty.value < 1) {
         qty.value = 1;
       }
     };
     qty.addEventListener("change", () => updateCart(productData));
-
+    // Add remove button
     const removeButton = document.createElement("button");
     removeButton.className = "remove-button";
     removeButton.onclick = () => {
@@ -99,7 +96,7 @@ function addCartItems(productData) {
     cartContainer.appendChild(cartItem);
   });
 }
-
+// Update the cart, called when the quantity input changes, or when an item is removed, udpate to local storage
 function updateCart(productData) {
   const cartItems = document.querySelectorAll(".cart-item");
   let items = JSON.parse(localStorage.getItem("cart"));
@@ -115,6 +112,7 @@ function updateCart(productData) {
   // console.log(JSON.parse(localStorage.getItem("cart")));
 }
 
+// Update the total cost, called when the cart is loaded, or when the quantity input changes
 function updateTotalCost(productData) {
   let items = JSON.parse(localStorage.getItem("cart"));
   const previousTotal = document.getElementById("previous-total");
@@ -132,6 +130,8 @@ function updateTotalCost(productData) {
   }
   totalCostElement.textContent = `$${globalTotalCost.toFixed(2)}`;
 }
+
+// Apply promo code
 function applyPromo() {
   const promoCode = document.getElementById("promo-code").value;
   const totalCostElement = document.getElementById("total-cost");
@@ -174,6 +174,7 @@ document
     //   window.location.href = "checkout.html";
   });
 
+// Add event listener to the form
 document
   .querySelector("#payment-form")
   .addEventListener("submit", function (e) {
@@ -200,6 +201,7 @@ document
     //   window.location.href = "checkout.html";
   });
 
+// Open and close product popup, called when clicking on a product
 function openCheckoutPopUp() {
   const background = document.querySelector(".popup-bg");
   const popup = document.querySelector(".checkout-popup");
@@ -207,32 +209,13 @@ function openCheckoutPopUp() {
   const userName = popup.querySelector("#checkout-user");
   userName.textContent = "Hello, " + globalName;
   price.textContent = "Your Total: $" + globalTotalCost.toFixed(2);
-  // fetch product data from products.json
-  // fetch("products.json")
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     let productData = data.products;
-  //     let product = productData[id];
-  //     console.log(product);
-  //     const title = popup.querySelector("#product-title");
-  //     title.textContent = product.name;
-  //     const img = popup.querySelector("#product-image");
-  //     img.src = "assets/images/" + product.image;
-  //     const price = popup.querySelector("#product-price");
-  //     price.textContent = "$" + product.price;
-  //     const description = popup.querySelector("#product-description");
-  //     description.textContent = product.description;
-  //     const button = popup.querySelector("#popup-add-to-cart-button");
-  //     button.onclick = () => {
-  //       addToCart(product.id);
-  //     };
-  //   });
 
   popup.classList.add("active");
   background.classList.add("active");
   console.log("Opening checkout popup");
 }
 
+// Close product popup, called when clicking on background
 function closeCheckoutPopUp() {
   const background = document.querySelector(".popup-bg");
   background.classList.remove("active");

@@ -39,7 +39,6 @@
 body {
     background-color: #f2f2f2;
     overflow-x: hidden;
-
 }
 
 h2,
@@ -379,7 +378,6 @@ h3:not(:first-of-type) {
     background: linear-gradient(to right, #0553b9 0%, #333 50%);
     background-size: 200% 100%;
     background-position: right bottom;
-    color: #fff;
     background-color: #fff;
     padding: 1rem 1.5rem;
     border: none;
@@ -980,13 +978,14 @@ h3:not(:first-of-type) {
 
 .sustainability-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     margin-bottom: 3rem;
 }
 
 .sustainability-container iframe {
     border-radius: 15px;
     margin: 2rem;
+    margin-left: 0rem;
     aspect-ratio: 16/9;
     width: 40%;
     height: auto;
@@ -1161,15 +1160,11 @@ textarea {
     cursor: pointer;
     margin: 1.5rem 0rem 0 3rem;
     font-size: 1.5rem;
-
-
-
 }
 
 .payment-methods {
     display: flex;
-    gap: 16px;
-    margin-bottom: 24px;
+    gap: 1rem;
     width: 100%;
 }
 
@@ -1353,6 +1348,7 @@ textarea {
 
     .sustainability-container iframe {
         width: 100%;
+        margin-right: 0rem;
     }
 
     .about-us-container img {

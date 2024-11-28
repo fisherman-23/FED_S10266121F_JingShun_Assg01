@@ -8,10 +8,8 @@ fetch("products.json")
       // add to product
       product.push(productData[i]);
     }
-
     // Initialize the grid with the initial set of images
     populateGrid(product);
-
     // Update the grid every 7 seconds
     setInterval(() => {
       updateGrid(product);
@@ -92,6 +90,7 @@ elements.forEach((element) => {
   });
 });
 
+// Add to cart function
 function addToCart(id) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -106,6 +105,7 @@ function addToCart(id) {
   console.log(JSON.parse(localStorage.getItem("cart")));
 }
 
+// Open and close product popup, called when clicking on a product
 function openProductPopUp(id) {
   const background = document.querySelector(".popup-bg");
   const popup = document.querySelector(".product-popup");
@@ -134,6 +134,7 @@ function openProductPopUp(id) {
   console.log("Opening product popup");
 }
 
+// Close product popup, called when clicking on background
 function closeProductPopUp() {
   const background = document.querySelector(".popup-bg");
   background.classList.remove("active");
@@ -141,6 +142,7 @@ function closeProductPopUp() {
   popup.classList.remove("active");
   console.log("Closing product popup");
 }
+// Add click event listener to the button
 document.querySelectorAll(".buy-button").forEach((button) => {
   button.addEventListener("click", function () {
     console.log("Button clicked");

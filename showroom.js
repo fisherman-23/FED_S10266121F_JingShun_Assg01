@@ -1,5 +1,6 @@
 let index = 0;
 
+// Showroom data
 const showrooms = [
   {
     name: "Kitchen",
@@ -33,6 +34,7 @@ const showrooms = [
   },
 ];
 
+// Navigates to the next showroom, called when clicking the next button
 function next() {
   index++;
   if (index >= showrooms.length) {
@@ -49,6 +51,7 @@ function previous() {
   updateShowroom();
 }
 
+// Update the showroom, called when the page loads, or when the next button is clicked
 function updateShowroom() {
   var h2 = document.getElementById("showroom-name");
   h2.innerText = showrooms[index].name;
@@ -66,6 +69,7 @@ function updateShowroom() {
   p.innerText = showrooms[index].description;
 }
 
+// Update the info bar height
 function updateInfoBar() {
   var infoBar = document.getElementById("info-bar");
   let width = window.innerWidth;
@@ -88,7 +92,7 @@ function addToCart(id) {
   } else {
     cart.push({ id, qty: 1 });
   }
-
+  // Update the cart
   localStorage.setItem("cart", JSON.stringify(cart));
   console.log(JSON.parse(localStorage.getItem("cart")));
 }

@@ -19,6 +19,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// letters to be used in the hacked text effect
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let interval = null;
 
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   h1.onmouseover = (event) => hackedTextEffect(event);
 });
 
+// Function to create the hacked text effect
 function hackedTextEffect(event) {
   let iteration = 0;
 
@@ -57,6 +59,8 @@ function hackedTextEffect(event) {
     iteration += 1 / 3;
   }, 30);
 }
+
+// Function to open the checkout popup
 function openProductPopUp(id) {
   const background = document.querySelector(".popup-bg");
   const popup = document.querySelector(".product-popup");
@@ -105,6 +109,7 @@ document.querySelectorAll(".buy-button").forEach((button) => {
   });
 });
 
+// Add show class to elements when they are in view
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry);
@@ -114,5 +119,6 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
+// Select all elements with the hidden class
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));

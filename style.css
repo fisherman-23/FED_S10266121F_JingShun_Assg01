@@ -372,6 +372,7 @@ h3:not(:first-of-type) {
     background-size: 200% 100%;
     background-position: right bottom;
     color: #fff;
+    background-color: #fff;
     padding: 1rem 1.5rem;
     border: none;
     border-radius: 10px;
@@ -724,6 +725,73 @@ h3:not(:first-of-type) {
     opacity: 1;
 
 }
+.checkout-popup {
+    background-color: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(20px);
+    padding: 2rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 90%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 1001;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.checkout-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    
+}
+.checkout-popup.active {
+    opacity: 1;
+}
+.card-details {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+#payment-button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: auto;
+    border-radius: 5px;
+}
+.form-group input{
+    background-color: #f1f1f1;
+    border: transparent;
+    box-shadow: none;
+    padding: 0.5rem;
+    margin-top: 0rem;
+    justify-self: center;
+    
+
+}
+#payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
 .popup-details-1 {
     display: flex;
     flex-direction: column;
@@ -1017,12 +1085,15 @@ margin-top: auto;
     padding: 0.5rem 1rem;
     border: none;
     cursor: pointer;
+    margin-left: 1rem;
+    border-radius: 5px;
 
 }
 
 .form-row {
     display: flex;
     margin-bottom: 10px;
+    gap: 1rem;
 }
 
 .form-row>div {
@@ -1032,7 +1103,7 @@ margin-top: auto;
 label {
     display: block;
     margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 input,
@@ -1040,9 +1111,10 @@ select,
 textarea {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: transparent;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #efefef;
+    box-shadow:  0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .back-button {
@@ -1056,6 +1128,61 @@ textarea {
 
 
 }
+.payment-methods {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.payment-method {
+    flex: 1;
+    position: relative;
+}
+
+.payment-method input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.payment-method label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    border: 2px solid #e3e8ee;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.payment-method input[type="radio"]:checked + label {
+    border-color: #6772e5;
+    background: rgba(103, 114, 229, 0.05);
+}
+
+.payment-method input[type="radio"]:focus + label {
+    box-shadow: 0 0 0 2px rgba(103, 114, 229, 0.2);
+}
+
+.payment-method label:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.payment-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.payment-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1f36;
+}
 
 @media screen and (max-width: 520px) {
     .promotion-item {
@@ -1064,6 +1191,10 @@ textarea {
 }
 
 @media screen and (max-width: 850px) {
+    .checkout-popup {
+        width: 80%;
+        height: 80%;
+    }
 
     .landing-text h1 {
         font-size: 2rem;

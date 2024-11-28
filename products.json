@@ -93,8 +93,8 @@
     },
     "13": {
       "name": "IDNAS All in one Bed",
-      "price": 49.99,
-      "image": "ikea-bed.png",
+      "price": 200.99,
+      "image": "ikea-bed-simple.png",
       "description": "A comfortable all-in-one bed with storage and a modern design.",
       "id": 13
     },

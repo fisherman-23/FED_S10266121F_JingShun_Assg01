@@ -9,10 +9,20 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <script src="cart.js" defer></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 </head>
 
 <body>
+    <dotlottie-player 
+    id="lottiePlayer"
+    src="https://lottie.host/2e322f20-e49e-4044-9a63-e35e69b4e89a/TO61alFtJZ.lottie"
+    background="transparent"
+    speed="1"
+    style="width: 300px; height: 300px; display: none; z-index: 1002; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);"
+    loop>
+</dotlottie-player>
     <div class="popup-bg" onclick="closeCheckoutPopUp()">
+        
         <div class="checkout-popup" onclick="event.stopPropagation()">
             <div class="checkout-details">
                 <h2 id="checkout-user">Hello, User</h2>

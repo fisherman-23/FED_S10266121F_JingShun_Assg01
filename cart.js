@@ -178,9 +178,25 @@ document
   .querySelector("#payment-form")
   .addEventListener("submit", function (e) {
     e.preventDefault();
+    const checkoutPopup = document.querySelector(".checkout-popup");
+    checkoutPopup.classList.remove("active");
     // call lottie animation
-
+    const lottiePlayer = document.getElementById("lottiePlayer");
+    lottiePlayer.style =
+      "width: 300px; height: 300px; display: block; z-index: 1002; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);"; // Display the Lottie animation
+    // Add click event listener to the button
+    lottiePlayer.play(); // Play the Lottie animation
     console.log("clicked");
+    // wait for the animation to finish
+    setTimeout(() => {
+      // Redirect to the homepage
+      //pause the animation
+      lottiePlayer.pause(); // Pause the Lottie animation
+
+      lottiePlayer.style = "display: none;"; // Hide the Lottie animation
+      window.location.href = "index.html";
+    }, 1500);
+
     //   window.location.href = "checkout.html";
   });
 

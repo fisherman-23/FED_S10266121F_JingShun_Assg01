@@ -6,6 +6,9 @@ Redesigned IKEA website for FED Assignment 1
 
 My idea for this FED Assignment 1 is for a redesign of IKEA’s website. This new responsive website will be user-friendly and visually appealing, while helping to showcase IKEA’s products and services, and allow users to view and interact with product details seamlessly.
 
+The website is live at: https://fisherman-23.github.io/FED_S10266121F_JingShun_Assg01/
+Figma wireframe file: https://www.figma.com/design/qnvzrAMTrRNOExxptQotDc/FED-Assg-1-Wireframe?node-id=0-1&t=g3Z2G0VhEVodK1qT-1
+
 ## Target audience:
 
 Homeowners, renters and individuals who are looking to purchase IKEA furniture through online means. This website is meant to help these users by providing information on products and promotions, showing rooms to help users draw inspiration, platform to apply for membership and finally to place their order and get their items delivered.
@@ -50,6 +53,8 @@ A streamlined and user-friendly page where users can review their shopping cart,
 
 **Navigation**
 
+Navigation bar or hamburger menu (depending on device) on the landing screen of each page, allowing users to seamlessly navigate to their page of choice.
+
 ## Technology Used
 
 ### HTML
@@ -61,8 +66,6 @@ A streamlined and user-friendly page where users can review their shopping cart,
 ### Lottie Animations
 
 ### GitHub
-
-Navigation bar or hamburger menu (depending on device) on the landing screen of each page, allowing users to seamlessly navigate to their page of choice.
 
 ## Credits
 

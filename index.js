@@ -155,3 +155,11 @@ document.querySelectorAll(".buy-button").forEach((button) => {
     }, 1000); // Adjust duration to suit your effect
   });
 });
+
+const cardBack = document.querySelectorAll(".card-back");
+cardBack.forEach((card) => {
+  const buyButton = card.querySelector(".buy-button");
+  if (buyButton) {
+    buyButton.ontouchstart = (event) => event.stopPropagation();
+  }
+});

@@ -22,7 +22,7 @@
             <div class="popup-details-1">
                 <h2 id="product-title">Sample Item</h2>
                 <p id="product-price">Price: $X.XX</p>
-                <img id="product-image" src="assets\images\ikea-white-table.png" alt="Modern White Table">
+                <img id="product-image" src="assets/images/ikea-white-table.png" alt="Modern White Table">
             </div>
             <!-- Product Details -->
             <div class="popup-details-2">
@@ -35,16 +35,16 @@
     </div>
     <section class="landing showroom">
         <div class="landing-text">
-            <button class="hamburger-button" onclick="toggleMobileMenu(this)">
-                <img src="assets\images\Hamburger.svg" width="45px" alt="Hamburger Icon">
-                <ul class="mobile-menu">
-                    <a href="index.html">Home</a>
-                    <a href="showroom.html">Showroom</a>
-                    <a href="services.html">Services</a>
-                    <a href="cart.html">My Cart</a>
-                </ul>
-            </button>
+            <button class="hamburger-button" onclick="toggleMobileMenu(this.nextElementSibling)">
+                <img src="assets/images/Hamburger.svg" width="45" alt="Hamburger Icon">
 
+            </button>
+            <ul class="mobile-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="showroom.html">Showroom</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="cart.html">My Cart</a></li>
+            </ul>
 
             <h1 data-value="IKEA Showroom">IKEA Showroom</h1>
             <h3>To inspire your space.</h3>
@@ -53,26 +53,26 @@
         </div>
         <div class="landing-visual"></div>
         <nav class="navbar">
-            <a href="index.html"><img src="assets\images\ikea-logo.svg" alt="IKEA Logo"></a>
+            <a href="index.html"><img src="assets/images/ikea-logo.svg" alt="IKEA Logo"></a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li class="selected"><a href="showroom.html">Showroom</a></li>
                 <li><a href="services.html">Services</a></li>
             </ul>
-            <a href="cart.html" class="cart-button"><img src="assets\images\ShoppingCartSimple.svg" alt="Cart Icon"></a>
+            <a href="cart.html" class="cart-button"><img src="assets/images/ShoppingCartSimple.svg" alt="Cart Icon"></a>
 
         </nav>
     </section>
     <!-- Showroom section with featured product -->
-    <section class="showroom" id="showroom" style="background-image: url('assets\\images\\ikea-kitchen.png');">
+    <section class="showroom" id="showroom" style="background-image: url('assets/images/ikea-kitchen.png');">
         <div class="info-bar" id="info-bar">
             <div>
                 <!-- Showroom name and arrow controls -->
 
                 <h2 id="showroom-name">Kitchen</h2>
                 <div class="arrow-controls">
-                    <button onclick="previous()"><img src="assets/images/ArrowCircleLeft.svg"></button>
-                    <button onclick="next()"><img src="assets/images/ArrowCircleRight.svg"></button>
+                    <button onclick="previous()"><img src="assets/images/ArrowCircleLeft.svg" alt="Left Arrow"></button>
+                    <button onclick="next()"><img src="assets/images/ArrowCircleRight.svg" alt="Right Arrow"></button>
                 </div>
             </div>
 
@@ -85,6 +85,7 @@
             <h3>Featured</h3>
             <img class="featured-image" id="featured-image" src="assets/images/ikea-kitchen-tap.png"
                 alt="featured product image" onclick="openProductPopUp(14)">
+        </div>
     </section>
     <!-- Footer section-->
     <footer class="footer">

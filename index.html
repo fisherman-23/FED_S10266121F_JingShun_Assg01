@@ -22,7 +22,7 @@
             <div class="popup-details-1">
                 <h2 id="product-title">Sample Item</h2>
                 <p id="product-price">Price: $X.XX</p>
-                <img id="product-image" src="assets\images\ikea-white-table.png" alt="Modern White Table">
+                <img id="product-image" src="assets/images/ikea-white-table.png" alt="Modern White Table">
             </div>
             <div class="popup-details-2">
                 <h3>Product Details</h3>
@@ -35,15 +35,16 @@
     <!-- Landing section including navigation and hero content -->
     <section class="landing home">
         <div class="landing-text">
-            <button class="hamburger-button" onclick="toggleMobileMenu(this)">
-                <img src="assets\images\Hamburger.svg" width="45px" alt="Hamburger Icon">
-                <ul class="mobile-menu">
-                    <a href="index.html">Home</a>
-                    <a href="showroom.html">Showroom</a>
-                    <a href="services.html">Services</a>
-                    <a href="cart.html">My Cart</a>
-                </ul>
+            <button class="hamburger-button" onclick="toggleMobileMenu(this.nextElementSibling)">
+                <img src="assets/images/Hamburger.svg" width="45" alt="Hamburger Icon">
+
             </button>
+            <ul class="mobile-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="showroom.html">Showroom</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="cart.html">My Cart</a></li>
+            </ul>
             <h1 data-value="Welcome to IKEA">Welcome to IKEA</h1>
             <h3>Designed for life.</h3>
             <button class="start-button"
@@ -51,14 +52,14 @@
         </div>
         <div class="landing-visual"></div>
         <nav class="navbar">
-            <a href="index.html"><img src="assets\images\ikea-logo.svg" alt="IKEA Logo"></a>
+            <a href="index.html"><img src="assets/images/ikea-logo.svg" alt="IKEA Logo"></a>
             <ul>
                 <li class="selected"><a href="index.html">Home</a></li>
                 <li><a href="showroom.html">Showroom</a></li>
                 <li><a href="services.html">Services</a></li>
 
             </ul>
-            <a href="cart.html" class="cart-button"><img src="assets\images\ShoppingCartSimple.svg" alt="Cart Icon"></a>
+            <a href="cart.html" class="cart-button"><img src="assets/images/ShoppingCartSimple.svg" alt="Cart Icon"></a>
         </nav>
     </section>
     <!-- Promotions section showcasing special offers -->
@@ -69,7 +70,7 @@
 
             <div class="promotion-item hidden">
                 <div class="card-front">
-                    <img src="assets\images\ikea-white-table.png" alt="Modern White Table">
+                    <img src="assets/images/ikea-white-table.png" alt="Modern White Table">
                     <div>
                         <h3>MARIUS Table</h3>
                         <p>Minimalist design meets comfort</p>
@@ -85,15 +86,15 @@
 
                         <h3 style="font-weight: bold;">Current Price: $75.99</h3>
                     </div>
-
-                    <button class="buy-button" onclick="addToCart(0)" ontouchstart="event.stopPropagation()">Add to
+                    <!-- ontouchstart gives error when validating but is required for mobile touch events -->
+                    <button class="buy-button" onclick="addToCart(0)">Add to
                         cart</button>
                 </div>
             </div>
 
             <div class="promotion-item hidden">
                 <div class="card-front">
-                    <img src="assets\images\ikea-blue-chair.png" alt="Blue Chair">
+                    <img src="assets/images/ikea-blue-chair.png" alt="Blue Chair">
                     <div>
                         <h3>POÄNG Armchair</h3>
                         <p>Minimalist design meets comfort</p>
@@ -112,13 +113,13 @@
                         <h3 style="font-weight: bold;">Current Price: $150.99</h3>
                     </div>
 
-                    <button class="buy-button" onclick="addToCart(1)" ontouchstart="event.stopPropagation()">Add to
+                    <button class="buy-button" onclick="addToCart(1)">Add to
                         cart</button>
                 </div>
             </div>
             <div class="promotion-item hidden">
                 <div class="card-front">
-                    <img src="assets\images\ikea-blue-towel.png" alt="Blue Towel">
+                    <img src="assets/images/ikea-blue-towel.png" alt="Blue Towel">
                     <div>
                         <h3>FREDRIKSJÖN Bath Towel</h3>
                         <p>Minimalist design meets comfort</p>
@@ -137,7 +138,7 @@
                         <h3 style="font-weight: bold;">Current Price: $25.99</h3>
                     </div>
 
-                    <button class="buy-button" onclick="addToCart(2)" ontouchstart="event.stopPropagation()">Add to
+                    <button class="buy-button" onclick="addToCart(2)">Add to
                         cart</button>
                 </div>
             </div>
@@ -149,7 +150,7 @@
         <h2>New Arrivals</h2>
         <div class="new-arrivals-container">
             <div class="new-arrivals-image hidden">
-                <img src="assets\images\ikea-bed.png" alt="IKEA Bed">
+                <img src="assets/images/ikea-bed.png" alt="IKEA Bed">
                 <div class="price-tag">$200.99</div>
                 <div class="image-overlay">
                     <button class="buy-button" onclick="addToCart(13)">Add to cart</button>

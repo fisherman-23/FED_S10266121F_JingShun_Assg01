@@ -18,21 +18,20 @@
 </head>
 
 <body>
-        <!-- Landing section including navigation and hero content -->
+    <!-- Landing section including navigation and hero content -->
 
     <section class="landing services">
         <div class="landing-text">
-            <button class="hamburger-button" onclick="toggleMobileMenu(this)">
-                <img src="assets\images\Hamburger.svg" width="45px" alt="Hamburger Icon">
-                <!-- Mobile menu that will display when on mobile view -->
-                <ul class="mobile-menu">
-                    <a href="index.html">Home</a>
-                    <a href="showroom.html">Showroom</a>
-                    <a href="services.html">Services</a>
-                    <a href="cart.html">My Cart</a>
+            <button class="hamburger-button" onclick="toggleMobileMenu(this.nextElementSibling)">
+                <img src="assets/images/Hamburger.svg" width="45" alt="Hamburger Icon">
 
-                </ul>
             </button>
+            <ul class="mobile-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="showroom.html">Showroom</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="cart.html">My Cart</a></li>
+            </ul>
 
 
             <h1 data-value="IKEA Services">IKEA Services</h1>
@@ -43,13 +42,13 @@
         </div>
         <div class="landing-visual"></div>
         <nav class="navbar">
-            <a href="index.html"><img src="assets\images\ikea-logo.svg" alt="IKEA Logo"></a>
+            <a href="index.html"><img src="assets/images/ikea-logo.svg" alt="IKEA Logo"></a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="showroom.html">Showroom</a></li>
                 <li class="selected"><a href="services.html">Services</a></li>
             </ul>
-            <a href="cart.html" class="cart-button"><img src="assets\images\ShoppingCartSimple.svg" alt="Cart Icon" ></a>
+            <a href="cart.html" class="cart-button"><img src="assets/images/ShoppingCartSimple.svg" alt="Cart Icon"></a>
 
         </nav>
     </section>
@@ -62,7 +61,8 @@
                 <div class="membership-card" id="membership-card">
                 </div>
             </div>
-            <h3 id="application-details">Applications reopen in January, keep a lookout for our upcoming announcements and special offers.</h3>            
+            <h3 id="application-details">Applications reopen in January, keep a lookout for our upcoming announcements
+                and special offers.</h3>
             <!-- <button class="apply-button" onclick="applyMembership()">Apply Now</button> -->
         </div>
 
@@ -72,7 +72,8 @@
         <h2>About Us</h2>
 
         <div class="about-us-container">
-            <p class="hidden">At IKEA, we're more than just a furniture company—we're a global home furnishing brand with a unique
+            <p class="hidden">At IKEA, we're more than just a furniture company—we're a global home furnishing brand
+                with a unique
                 vision of
                 creating a better everyday life for the many people. Founded in 1943 by Ingvar Kamprad in Sweden, our
                 philosophy has
@@ -93,14 +94,15 @@
                 we're helping people transform their living spaces and create homes that reflect their personality,
                 dreams, and
                 aspirations.</p>
-            <img src="assets\images\ikea-about-us.png" alt="IKEA Store">
+            <img src="assets/images/ikea-about-us.png" alt="IKEA Store">
         </div>
     </section>
     <!-- Sustainability Pledge section that states IKEA's vision for sustainability  -->
     <section class="sustainability-pledge" id="sustainability">
         <h2>Our Sustainability Pledge</h2>
         <div class="sustainability-container">
-            <p class="hidden">At IKEA, sustainability isn't just a buzzword—it's a fundamental commitment that drives everything we do.
+            <p class="hidden">At IKEA, sustainability isn't just a buzzword—it's a fundamental commitment that drives
+                everything we do.
                 We
                 recognize our responsibility to the planet and future generations, which is why we've set ambitious
                 goals to

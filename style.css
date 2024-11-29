@@ -134,7 +134,7 @@ h3 {
     border-radius: 0px 45px 45px 0px;
 }
 
-.open .mobile-menu {
+.open.mobile-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -143,8 +143,10 @@ h3 {
     opacity: 1;
     transform: translateX(0);
 }
-
-.mobile-menu a {
+.mobile-menu li {
+    list-style: none;
+}
+.mobile-menu li a {
     text-decoration: none;
     color: white;
     font-size: 1rem;

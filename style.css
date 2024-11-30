@@ -1,3 +1,4 @@
+/* Define fonts */
 @font-face {
     font-family: 'Montserrat';
     src: url('assets\\fonts\\Montserrat-Regular.ttf') format('truetype');
@@ -36,16 +37,19 @@
 
 }
 
+/* Set background color and hide overflow */
 body {
     background-color: #f2f2f2;
     overflow-x: hidden;
 }
 
+/* Define default styles for header tags */
 h2,
 h3 {
     font-weight: bold;
 }
 
+/* Style for landing section, including background image */
 .landing {
     background-image: url('assets\\images\\modern-white-minimalist-interior-kitchen-sofa.jpg');
     background-size: cover;
@@ -114,6 +118,7 @@ h3 {
     border: none;
 }
 
+/* Styling for mobile menu bar */
 .mobile-menu {
     display: flex;
     position: fixed;
@@ -170,6 +175,7 @@ h3 {
     animation: bounce 1.5s infinite;
 }
 
+/* Animation keyframe for b ounce effect applied to arrow down button */
 @keyframes bounce {
 
     0%,
@@ -993,6 +999,7 @@ h3:not(:first-of-type) {
     height: auto;
 }
 
+/* Media queries for different screen sizes */
 @media screen and (max-width: 1350px) {
     .navbar {
         left: 20%;

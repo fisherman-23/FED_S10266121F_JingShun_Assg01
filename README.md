@@ -80,3 +80,5 @@ All icons are taken from the Phosphor Icon Pack published in the Figma Community
 
 Fonts used is IKEASans and Montserrat, downloaded from
 https://www.onlinewebfonts.com
+
+Most codes and functions are implemented by myself with the usage of LLM's like ChatGPT and Claude used to provide assistance and code generation when necessary

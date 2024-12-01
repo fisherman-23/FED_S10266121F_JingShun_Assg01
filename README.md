@@ -10,6 +10,8 @@ The website is live at: https://fisherman-23.github.io/FED_S10266121F_JingShun_A
 
 Figma wireframe file: https://www.figma.com/design/qnvzrAMTrRNOExxptQotDc/FED-Assg-1-Wireframe?node-id=0-1&t=g3Z2G0VhEVodK1qT-1
 
+NOTE: When running locally, please use a live server instead of opening the file directly in the browser, as the website depends on fetching local JSON files and utilizing local storage.
+
 ## Target audience:
 
 Homeowners, renters and individuals who are looking to purchase IKEA furniture through online means. This website is meant to help these users by providing information on products and promotions, showing rooms to help users draw inspiration, platform to apply for membership and finally to place their order and get their items delivered.
